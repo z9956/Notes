@@ -23,4 +23,6 @@
 ```
 this.setState({ [list[{ index }]]: item });
 ```
+### Code-Splitting
+[React.lazy Suspense](https://zh-hans.reactjs.org/docs/code-splitting.html#reactlazy)
 **[⬆ back to top](#table-of-contents)**
