@@ -1,8 +1,8 @@
 ## Table of Contents
 
-[eslint](#eslint)<br>
-[React](#React)
-[zsh](#zsh)
+1. [eslint](#eslint)
+2. [React](#React)
+3. [Zsh](#Zsh)
 
 ## eslint
 ### @typescript-eslint/no-unused-vars 
@@ -29,11 +29,11 @@ this.setState({ [list[{ index }]]: item });
 
 **[⬆ back to top](#table-of-contents)**
 
-## zsh
-### zsh bindkey
+## Zsh
+### Zsh bindkey
 不使用 [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh) 配置，直接用zsh安装[zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions) ,[zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting) 后，backward-word、forward-word错误
 
-[zsh手册](http://zsh.sourceforge.net/Doc/Release/Zsh-Line-Editor.html#Standard-Widgets)
+[Zsh绑定键转义序列](http://zsh.sourceforge.net/Doc/Release/Zsh-Line-Editor.html#Standard-Widgets)
 
 .zshrc下添加
 ```
