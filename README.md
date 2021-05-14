@@ -35,7 +35,6 @@ this.setState({ [list[{ index }]]: item });
 
 [zsh手册](http://zsh.sourceforge.net/Doc/Release/Zsh-Line-Editor.html#Standard-Widgets)
 
-
 .zshrc下添加
 ```
 # ctrl+<- | ctrl+->
