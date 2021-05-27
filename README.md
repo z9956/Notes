@@ -20,6 +20,11 @@
 **[⬆ back to top](#table-of-contents)**
 
 ## React
+### normalize.css(使用create-react-app创建的项目)
+app.css下添加
+```
+@import-normalize; /* bring in normalize.css styles */
+```
 ### setState更新数组元素
 ```
 this.setState({ [list[{ index }]]: item });
