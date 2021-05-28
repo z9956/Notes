@@ -1,11 +1,11 @@
 ## Table of Contents
 
-1. [版本控制](#版本控制)
+1. [Version Manager](#Version-Manager)
 1. [ESLint](#ESLint)
 2. [React](#React)
 3. [Zsh](#Zsh)
 
-## 版本控制
+## Version Manager
 ### nvm
 [Node Version Manager](https://github.com/nvm-sh/nvm)
 ### gvm
