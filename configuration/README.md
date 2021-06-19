@@ -3,9 +3,10 @@
 1. [babelrc](#babelrc)
 2. [eslintrc](#eslintrc)
 3. [prettier](#prettier)
-3. [commitlint](#commitlint)
+4. [commitlint](#commitlint)
 
 ## babelrc
+
 ```
 package.json
 
@@ -19,6 +20,7 @@ package.json
 **[⬆ back to top](#table-of-contents)**
 
 ## eslintrc
+
 ```
 package.json
 
@@ -27,9 +29,11 @@ package.json
 "eslint-config-prettier": "^8.1.0",
 "eslint-plugin-react-hooks": "^4.2.0",
 ```
+
 **[⬆ back to top](#table-of-contents)**
 
 ## prettier
+
 ```
 package.json
 
@@ -45,9 +49,11 @@ package.json
 	    }
 	},
 ```
+
 **[⬆ back to top](#table-of-contents)**
 
 ## commitlint
+
 ```
 package.json
 
@@ -63,4 +69,5 @@ package.json
 	    }
 	},
 ```
+
 **[⬆ back to top](#table-of-contents)**
