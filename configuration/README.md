@@ -77,12 +77,37 @@ yarn pretty-quick --staged
 ## commitlint
 
 ```
+husky v4
+
 package.json
 
-"devDependencies" {
-    "husky": "^4.3.8",
-    "@commitlint/cli": "^11.0.0",
-	"@commitlint/config-conventional": "^11.0.0",
+{
+	"devDependencies": {
+		"husky": "^4.3.8",
+		"@commitlint/cli": "^11.0.0",
+		"@commitlint/config-conventional": "^11.0.0",
+	},
+
+	"husky": {
+		"hooks": {
+			"commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+		},
+	},
+}
+	
+	
+husky v6
+
+package.json
+{
+	"scripts": {
+		"prepare": "husky install",
+	},
+	"devDependencies": {
+		"husky": "^6.0.0",
+		"@commitlint/cli": "^11.0.0",
+		"@commitlint/config-conventional": "^11.0.0",
+	},
 }
 
 .husky/commit-msg
