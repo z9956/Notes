@@ -35,19 +35,41 @@ package.json
 ## prettier
 
 ```
-package.json
+husky v4
 
-"devDependencies" {
-    "husky": "^4.3.8",
-    "prettier": "^2.2.1",
-    "pretty-quick": "^3.1.0"
+package.json
+{
+	"devDependencies": {
+		"husky": "^4.3.8",
+		"prettier": "^2.2.1",
+		"pretty-quick": "^3.1.0",
+	},
+
+	"husky": {
+		"hooks": {
+			"pre-commit": "pretty-quick --staged",
+		},
+	},
+}
+	
+husky v6
+
+package.json
+{
+	"scripts": {
+		"prepare": "husky install",
+	},
+	"devDependencies": {
+		"husky": "^6.0.0",
+		"prettier": "^2.2.1",
+		"pretty-quick": "^3.1.0",
+	},
 }
 
-"husky": {
-	"hooks": {
-		"pre-commit": "pretty-quick --staged"
-	    }
-	},
+.husky/pre-commit
+npx --no-install pretty-quick --staged
+or
+yarn pretty-quick --staged
 ```
 
 **[⬆ back to top](#table-of-contents)**
@@ -63,11 +85,10 @@ package.json
 	"@commitlint/config-conventional": "^11.0.0",
 }
 
-"husky": {
-	"hooks": {
-		"commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-	    }
-	},
+.husky/commit-msg
+npx --no-install commitlint --edit $1
+or
+yarn commitlint --edit $1
 ```
 
 **[⬆ back to top](#table-of-contents)**
