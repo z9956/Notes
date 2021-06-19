@@ -54,6 +54,12 @@ package.json
 	
 husky v6
 
+npx husky-init && npm
+npm set-script prepare "husky install"
+npx husky add .husky/pre-commit 'yarn pretty-quick --staged'
+
+or
+
 package.json
 {
 	"scripts": {
@@ -97,6 +103,12 @@ package.json
 	
 	
 husky v6
+
+npx husky-init && npm
+npm set-script prepare "husky install"
+npx husky add .husky/commit-msg 'npx --no-install commitlint --edit "$1"'
+
+or
 
 package.json
 {
