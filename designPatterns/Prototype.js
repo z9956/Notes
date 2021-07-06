@@ -1,41 +1,18 @@
 /**
  * 原型模式是一种创建型设计模式， 使你能够复制已有对象， 而又无需使代码依赖它们所属的类
  */
-class Prototype {
-	primitive;
-	component;
-	circularReference;
+class Sheep {
+	constructor(name, weight) {
+		this.name = name;
+		this.weight = weight;
+	}
 
 	clone() {
-		const clone = Object.create(this);
-
-		clone.component = Object.create(this.component);
-		clone.circularReference = {
-			...this.circularReference,
-			prototype: { ...this },
-		};
-
-		return clone;
+		return new Sheep(this.name, this.weight);
 	}
 }
 
-class ComponentWithBackReference {
-	prototype;
+const sheep = new Sheep('sheep', 10);
+const cloneSheep = sheep.clone();
 
-	constructor(prototype) {
-		this.prototype = prototype;
-	}
-}
-
-const clientCode = () => {
-	const p1 = new Prototype();
-	p1.primitive = 111;
-	p1.component = new Date();
-	p1.circularReference = new ComponentWithBackReference();
-
-	const p2 = p1.clone();
-
-	if (p1.primitive === p2.primitive) {
-		console.log('===');
-	}
-};
+sheep.name === cloneSheep.name && console.log('===');
