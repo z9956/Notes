@@ -3,6 +3,7 @@
 1. [ESLint](#ESLint) 
 2. [React](#React)
 3. [React-18](#React-18)
+4. [Rollup](#Rollup)
 
 ## ESLint
 
@@ -89,6 +90,27 @@ class ErrorBoundary extends React.Component {
     "types": ["react/next", "react-dom/next"]
   }
 }
+```
+
+**[⬆ back to top](#table-of-contents)**
+
+## Rollup
+
+* (!) Entry module "src/main.js" is implicitly using "default" export mode...
+
+```javascript
+ //rollup.config.js exports: "auto"
+export default {
+  input: 'src/main.js',
+  output: [
+    {
+      dir: 'lib',
+      format: 'cjs',
+      exports: "auto",
+    },
+  ],
+  ...
+};
 ```
 
 **[⬆ back to top](#table-of-contents)**
