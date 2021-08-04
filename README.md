@@ -13,8 +13,8 @@
 * [date-format](https://github.com/z9956/date-format)
 * [diy-fre](https://github.com/z9956/diy-fre)
 * [diy-react](https://github.com/z9956/diy-react)
-* [mini-cli](https://github.com/z9956/mini-cli)
 * [minipack](https://github.com/z9956/minipack)
+* [simple-cli](https://github.com/z9956/simple-cli)
 * [source-code](https://github.com/z9956/source-code)
 
 ### golang
