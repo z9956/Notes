@@ -1,14 +1,14 @@
 ## Table of Contents
 
 * [algorithms](https://github.com/z9956/algorithms)
-* [books](./books/README.md)
-* [configuration](./configuration/README.md)
-* [designPatterns](./designPatterns/README.md)
-* [git](./git/README.md)
+* [books](books/README.md)
+* [configuration](configuration/README.md)
+* [designPatterns](designPatterns/README.md)
+* [git](git/README.md)
 * [leetcode](https://github.com/z9956/leetcode)
-* [problems](./problems/FrontEnd.md)
-* [regexp](./regexp/README.md)
-* [templates](./templates/README.md)
+* [problems](problems/FrontEnd.md)
+* [regexp](regexp/README.md)
+* [templates](templates/README.md)
 
 ### Front end
 * [date-format](https://github.com/z9956/date-format)
