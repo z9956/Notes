@@ -31,7 +31,7 @@
 				if (!e.clipboardData) return;
 				let data = e.clipboardData.items;
 
-				for (let i = 0; i < data.length; i += 1) {
+				for (let i = 0; i < data.length; i++) {
 					if (data[i].kind === 'string' && data[i].type.match('^text/plain')) {
 						data[i].getAsString((text) => {
 							$log.appendChild(document.createTextNode(text));
