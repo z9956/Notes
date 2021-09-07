@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>beautifyTime</title>
+	</head>
+	<body>
+		<script src="https://unpkg.com/dayjs@1.10.6/dayjs.min.js"></script>
+		<script type="module">
+			const beautifyTime = (timestamp) => {
+				if (!timestamp) return;
+				let year = dayjs(timestamp).year();
+				let nowYear = dayjs().year();
+				let minutes = dayjs().diff(dayjs(timestamp), 'minutes');
+				let hours = dayjs().diff(dayjs(timestamp), 'hours');
+				let seconds = dayjs().diff(dayjs(timestamp), 'seconds');
+				if (seconds < 60) {
+					return seconds <= 0 ? '刚刚' : `${seconds}秒前`;
+				}
+
+				if (minutes < 60) {
+					return `${minutes}分钟前`;
+				}
+
+				if (hours < 24) {
+					return `${hours}小时前`;
+				}
+
+				if (year !== nowYear) {
+					return dayjs(timestamp).format('YYYY年MM月DD日');
+				}
+
+				return dayjs(timestamp).format('MM月DD日 HH:mm');
+			};
+
+			console.log(beautifyTime(1630992535010));
+		</script>
+	</body>
+</html>
