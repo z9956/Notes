@@ -9,6 +9,7 @@
 * [problems](problems/FrontEnd.md)
 * [regexp](regexp/README.md)
 * [templates](templates/README.md)
+* [utils](utils/)
 
 ### Front end
 * [date-format](https://github.com/z9956/date-format)
