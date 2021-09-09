@@ -25,8 +25,6 @@
 			$editor.onpaste = pasteIntercept;
 
 			function pasteIntercept(e) {
-				//防止文字默认粘贴至文本框
-				e.preventDefault();
 
 				if (!e.clipboardData) return;
 				let data = e.clipboardData.items;
@@ -37,6 +35,8 @@
 							$log.appendChild(document.createTextNode(text));
 						});
 					} else if (data[i].kind === 'file' && data[i].type.match('^image/')) {
+						//防止文件名默认粘贴至文本框 除文本外，都需要加
+						e.preventDefault();
 						const file = data[i].getAsFile();
 						const imgTag = document.createElement('img');
 						imgTag.src = URL.createObjectURL(file);
