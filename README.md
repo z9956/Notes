@@ -1,5 +1,6 @@
 ## Table of Contents
 
+* [Ubuntu](Ubuntu/README.md)
 * [algorithms](https://github.com/z9956/algorithms)
 * [books](books/README.md)
 * [configuration](configuration/README.md)
@@ -10,6 +11,8 @@
 * [regexp](regexp/README.md)
 * [templates](templates/README.md)
 * [utils](utils/)
+* [wsl](wsl/README.md)
+* [zsh](zsh/README.md)
 
 ### Front end
 * [date-format](https://github.com/z9956/date-format)
