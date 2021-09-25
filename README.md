@@ -24,3 +24,6 @@
 
 ### golang
 * [go-learning](https://github.com/z9956/go-learning)
+
+### Rust
+* [rust-learning](https://github.com/z9956/rust-learning)
