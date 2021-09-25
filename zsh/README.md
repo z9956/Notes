@@ -1,8 +1,8 @@
 ## Table of Contents
 
-1. [zsh bindkey](#zsh bindkey)
+1. [bindkey](#bindkey)
 
-## zsh bindkey
+## bindkey
 
 不使用 [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh) 配置，直接用zsh安装[zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions) ,[zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting) 后，backward-word、forward-word错误
 
