@@ -2,6 +2,7 @@
 
 - [ ] [算法图解](https://github.com/egonSchiele/grokking_algorithms)
 - [ ] [你所不知道的 JavaScript 上中下](https://github.com/getify/You-Dont-Know-JS)
+- [ ] [JavaScript DOM编程艺术(第2版)]
 - [ ] JavaScript高级程序设计(第4版)
 
 - [ ] 图解HTTP
