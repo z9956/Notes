@@ -4,6 +4,7 @@
 2. [React](#React)
 3. [React-18](#React-18)
 4. [Rollup](#Rollup)
+4. [替换Moment.js(ant-design)](#替换Moment.js(ant-design))
 
 ## ESLint
 
@@ -111,6 +112,24 @@ export default {
   ],
   ...
 };
+```
+
+**[⬆ back to top](#table-of-contents)**
+
+## 替换Moment.js(ant-design)
+* [ant design](https://ant.design/docs/react/replace-moment-cn#%E4%BD%BF%E7%94%A8%E8%87%AA%E5%AE%9A%E4%B9%89%E7%BB%84%E4%BB%B6)
+```typescript jsx
+//自定义组件 新建 src/components/DatePicker.tsx
+import { Dayjs } from 'dayjs';
+import dayjsGenerateConfig from 'rc-picker/es/generate/dayjs';
+import generatePicker from 'antd/es/date-picker/generatePicker';
+import 'antd/es/date-picker/style/index';
+
+const DatePicker = generatePicker<Dayjs>(dayjsGenerateConfig);
+export default DatePicker;
+
+//导出自定义组件 src/components/index.tsx
+export { default as DatePicker } from './DatePicker';
 ```
 
 **[⬆ back to top](#table-of-contents)**
