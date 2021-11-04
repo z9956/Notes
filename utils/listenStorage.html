@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>监听同一页面 Storage更新</title>
+	</head>
+	<body>
+		<button type="submit">button</button>
+		<script>
+			const button = document.querySelector('button');
+
+			const originalSetItem = localStorage.setItem;
+
+			localStorage.setItem = function (key, newValue) {
+				const setItemEvent = new Event('listenStorage');
+				setItemEvent.newValue = newValue;
+				setItemEvent.key = key;
+				window.dispatchEvent(setItemEvent);
+				originalSetItem.apply(this, arguments);
+			};
+
+			window.addEventListener('listenStorage', (event) => {
+				console.log(event.key, event.newValue, event);
+			});
+
+			button.onclick = () => {
+				const now = String(Date.now());
+				localStorage.setItem(now, now);
+			};
+		</script>
+	</body>
+</html>
