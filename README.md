@@ -21,6 +21,7 @@
 * [minipack](https://github.com/z9956/minipack)
 * [simple-cli](https://github.com/z9956/simple-cli)
 * [source-code](https://github.com/z9956/source-code)
+* [vision-cli](https://github.com/z9956/vision-cli)
 
 ### golang
 * [go-learning](https://github.com/z9956/go-learning)
