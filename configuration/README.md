@@ -7,125 +7,135 @@
 
 ## babelrc
 
-```
-package.json
+```json5
+//package.json
 
-"babel-plugin-transform-remove-console": "^6.9.4",
+{
+	devDependencies: {
+		'babel-plugin-transform-remove-console': '^6.9.4',
 
-"@babel/plugin-proposal-nullish-coalescing-operator": "^7.12.1",
-"@babel/plugin-proposal-optional-chaining": "^7.12.7",
-
+		'@babel/plugin-proposal-nullish-coalescing-operator': '^7.12.1',
+		'@babel/plugin-proposal-optional-chaining': '^7.12.7',
+	},
+}
 ```
 
 **[⬆ back to top](#table-of-contents)**
 
 ## eslintrc
 
-```
-package.json
+```json5
+//package.json
 
-"@typescript-eslint/parser": "^4.5.0",
+{
+	dependencies: {
+		'@typescript-eslint/parser': '^4.5.0',
 
-"eslint-config-prettier": "^8.1.0",
-"eslint-plugin-react-hooks": "^4.2.0",
+		'eslint-config-prettier': '^8.1.0',
+		'eslint-plugin-react-hooks': '^4.2.0',
+	},
+}
 ```
 
 **[⬆ back to top](#table-of-contents)**
 
 ## prettier
 
-```
-husky v4
+```json5
+//husky v4
 
-package.json
+//package.json
 {
-	"devDependencies": {
-		"husky": "^4.3.8",
-		"prettier": "^2.2.1",
-		"pretty-quick": "^3.1.0",
+	devDependencies: {
+		husky: '^4.3.8',
+		prettier: '^2.2.1',
+		'pretty-quick': '^3.1.0',
 	},
 
-	"husky": {
-		"hooks": {
-			"pre-commit": "pretty-quick --staged",
+	husky: {
+		hooks: {
+			'pre-commit': 'pretty-quick --staged',
 		},
 	},
 }
-	
-husky v6
+```
 
-npx husky-init && npm
-npm set-script prepare "husky install"
-npx husky add .husky/pre-commit 'yarn pretty-quick --staged'
+```json5
+//husky v6
 
-or
+//npx husky-init && npm
+//npm set-script prepare "husky install"
+//npx husky add .husky/pre-commit 'yarn pretty-quick --staged'
 
-package.json
+//or
+
+//package.json
 {
-	"scripts": {
-		"prepare": "husky install",
+	scripts: {
+		prepare: 'husky install',
 	},
-	"devDependencies": {
-		"husky": "^6.0.0",
-		"prettier": "^2.2.1",
-		"pretty-quick": "^3.1.0",
+	devDependencies: {
+		husky: '^6.0.0',
+		prettier: '^2.2.1',
+		'pretty-quick': '^3.1.0',
 	},
 }
 
-.husky/pre-commit
-npx --no-install pretty-quick --staged
-or
-yarn pretty-quick --staged
+//.husky/pre-commit
+//npx --no-install pretty-quick --staged
+//or
+//yarn pretty-quick --staged
 ```
 
 **[⬆ back to top](#table-of-contents)**
 
 ## commitlint
 
-```
-husky v4
+```json5
+//husky v4
 
-package.json
+//package.json
 
 {
-	"devDependencies": {
-		"husky": "^4.3.8",
-		"@commitlint/cli": "^11.0.0",
-		"@commitlint/config-conventional": "^11.0.0",
+	devDependencies: {
+		husky: '^4.3.8',
+		'@commitlint/cli': '^11.0.0',
+		'@commitlint/config-conventional': '^11.0.0',
 	},
 
-	"husky": {
-		"hooks": {
-			"commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+	husky: {
+		hooks: {
+			'commit-msg': 'commitlint -E HUSKY_GIT_PARAMS',
 		},
 	},
 }
-	
-	
-husky v6
+```
 
-npx husky-init && npm
-npm set-script prepare "husky install"
-npx husky add .husky/commit-msg 'npx --no-install commitlint --edit "$1"'
+```json5
+//husky v6
+//
+//npx husky-init && npm
+//npm set-script prepare "husky install"
+//npx husky add .husky/commit-msg 'npx --no-install commitlint --edit "$1"'
+//
+//or
 
-or
-
-package.json
+//package.json
 {
-	"scripts": {
-		"prepare": "husky install",
+	scripts: {
+		prepare: 'husky install',
 	},
-	"devDependencies": {
-		"husky": "^6.0.0",
-		"@commitlint/cli": "^11.0.0",
-		"@commitlint/config-conventional": "^11.0.0",
+	devDependencies: {
+		husky: '^6.0.0',
+		'@commitlint/cli': '^11.0.0',
+		'@commitlint/config-conventional': '^11.0.0',
 	},
 }
 
-.husky/commit-msg
-npx --no-install commitlint --edit $1
-or
-yarn commitlint --edit $1
+//.husky/commit-msg
+//npx --no-install commitlint --edit $1
+//or
+//yarn commitlint --edit $1
 ```
 
 **[⬆ back to top](#table-of-contents)**

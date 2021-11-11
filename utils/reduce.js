@@ -1,6 +1,6 @@
 /**
  * 数组对象去重
- * */
+ */
 const reduceArray = (repeatList = [], key = 'id') => {
 	let obj = {};
 

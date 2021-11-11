@@ -1,6 +1,6 @@
 /**
  * 转一维数组
- * */
+ */
 const readNodes = (tree = [], results = []) => {
 	for (let item of tree) {
 		results.push(item);

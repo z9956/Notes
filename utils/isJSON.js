@@ -1,7 +1,7 @@
 /**
  * 判断是否为JSON
  * @param { string } str 需要判断的数据
- * */
+ */
 export const isJSON = (str) => {
 	if (typeof str == 'string') {
 		try {

@@ -1,7 +1,7 @@
 /**
  * 获取文件大小
  * @param { number } size
- * */
+ */
 const getFileSize = (size) => {
 	let fileSize = size;
 	let count = 0;

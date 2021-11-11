@@ -1,7 +1,7 @@
 /**
  * 整数翻转
  * @param { number } x 正整数
- * */
+ */
 const reverse = (x) => {
 	let result = 0;
 

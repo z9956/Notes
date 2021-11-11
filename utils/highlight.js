@@ -5,7 +5,7 @@
  * @param { string } text 文本
  * @param { string } words 单词
  * @param { string } tag 表情
- * */
+ */
 function highlight(text, words, tag = 'span') {
 	let i,
 		len = words.length,

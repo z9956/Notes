@@ -8,7 +8,9 @@
 	<body>
 		<h3>按说明进行操作!</h3>
 		<label for="editor">
-			<textarea id="editor" rows="3" cols="80">尝试在这里粘贴(文本、图片)!</textarea>
+			<textarea id="editor" rows="3" cols="80">
+尝试在这里粘贴(文本、图片)!</textarea
+			>
 		</label>
 
 		<h3>Log</h3>
@@ -25,7 +27,6 @@
 			$editor.onpaste = pasteIntercept;
 
 			function pasteIntercept(e) {
-
 				if (!e.clipboardData) return;
 				let data = e.clipboardData.items;
 
