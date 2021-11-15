@@ -1,18 +1,18 @@
 ## Table of Contents
 
 - [algorithms](https://github.com/z9956/algorithms)
-- [books](books/README.md)
-- [configuration](configuration/README.md)
-- [designPatterns](designPatterns/README.md)
-- [git](git/README.md)
-- [leetcode](https://github.com/z9956/leetcode)
-- [problems](problems/FrontEnd.md)
-- [regexp](regexp/README.md)
-- [templates](templates/README.md)
-- [utils](utils/)
-- [wsl](wsl/README.md)
-- [zsh](zsh/README.md)
+- [Books](Books/README.md)
+- [Configuration](Configuration/README.md)
+- [DesignPatterns](DesignPatterns/README.md)
+- [Git](Git/README.md)
+- [LeetCode](https://github.com/z9956/leetcode)
+- [Problems](Problems/FrontEnd.md)
+- [Regexp](Regexp/README.md)
+- [Templates](Templates/README.md)
 - [Ubuntu](Ubuntu/README.md)
+- [Utils](Utils/)
+- [WSL](WSL/README.md)
+- [Zsh](Zsh/README.md)
 
 ### Front end
 
