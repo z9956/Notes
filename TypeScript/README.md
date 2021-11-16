@@ -4,6 +4,7 @@
 2. [ReturnType<Type>](#ReturnType)
 3. [Exclude<Type,ExcludedUnion>](#Exclude)
 4. [Omit<Type,Keys>](#Omit)
+5. [Pick<Type,Keys>](#Pick)
 
 ## <span id='Parameters'>Parameters<Type></span>
 
@@ -31,7 +32,7 @@ funFirst('1');
 
 **[⬆ back to top](#table-of-contents)**
 
-## <span id='ReturnType'>ReturnType<Type></span> 
+## <span id='ReturnType'>ReturnType<Type></span>
 
 - [官网链接](https://www.typescriptlang.org/docs/handbook/utility-types.html#returntypetype)
 - 获取函数的返回值类型
@@ -51,7 +52,7 @@ const params: Foo = { a: 1, b: 'b' };
 
 **[⬆ back to top](#table-of-contents)**
 
-## <span id='Exclude'>Exclude<Type,ExcludedUnion></span> 
+## <span id='Exclude'>Exclude<Type,ExcludedUnion></span>
 
 - [官网链接](https://www.typescriptlang.org/docs/handbook/utility-types.html?#excludetype-excludedunion)
 - 通过从 Type 中排除所有可分配给 ExcludedUnion 的成员来构造一个类型
@@ -81,7 +82,7 @@ type TodoPreview = Omit<Todo, 'description' | 'title'>;
 
 **[⬆ back to top](#table-of-contents)**
 
-## <span id='Omit'>Omit<Type,Keys></span> 
+## <span id='Omit'>Omit<Type,Keys></span>
 
 - [官网链接](https://www.typescriptlang.org/docs/handbook/utility-types.html?#omittype-keys)
 - 通过从 Type 中选取所有属性，然后删除 Keys（字符串字面或字符串字面的联合）来构造一个类型
@@ -105,6 +106,35 @@ type TodoPreview = Omit<Todo, 'description'>;
 const todo: TodoPreview = {
 	title: 'Clean room',
 	completed: false,
+};
+```
+
+**[⬆ back to top](#table-of-contents)**
+
+## <span id='Pick'>Pick<Type,Keys></span>
+
+- [官网链接](https://www.typescriptlang.org/docs/handbook/utility-types.html?#picktype-keys)
+- 通过从 Type 中挑选属性集合 Keys（字符串字面或字符串字面的联合）来构造一个类型
+
+```typescript
+interface Todo {
+	title: string;
+	description: string;
+	completed: boolean;
+}
+
+type TodoPreview = Pick<Todo, 'title' | 'description'>;
+
+/*
+ * type TodoPreview = {
+ *   title: string;
+ *   description: string;
+ * }
+ * */
+
+const todo: TodoPreview = {
+	title: 'Clean room',
+	description: 'description',
 };
 ```
 
