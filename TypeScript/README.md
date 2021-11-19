@@ -5,6 +5,8 @@
 3. [Exclude<Type,ExcludedUnion>](#Exclude)
 4. [Omit<Type,Keys>](#Omit)
 5. [Pick<Type,Keys>](#Pick)
+6. [Record<Keys,Type>](#Record)
+7. [infer](#infer)
 
 ## <span id='Parameters'>Parameters<Type></span>
 
@@ -136,6 +138,48 @@ const todo: TodoPreview = {
 	title: 'Clean room',
 	description: 'description',
 };
+```
+
+**[⬆ back to top](#table-of-contents)**
+
+## <span id='Record'>Record<Keys,Type></span>
+
+- [官网链接](https://www.typescriptlang.org/docs/handbook/utility-types.html#recordkeys-type)
+- 构建一个对象类型，其属性键是 Keys，其属性值是 Type。这个工具可以用来将一个类型的属性映射到另一个类型
+
+```typescript
+interface CatInfo {
+	age: number;
+	breed: string;
+}
+
+type CatName = 'luck' | 'boris' | 'mordred';
+
+const cats: Record<CatName, CatInfo> = {
+	luck: { age: 10, breed: 'Persian' },
+	boris: { age: 5, breed: 'Maine Coon' },
+	mordred: { age: 16, breed: 'British Shorthair' },
+};
+
+type keys = 'A' | 'B' | 'C';
+const result: Record<keys, number> = {
+	A: 1,
+	B: 2,
+	C: 3,
+};
+```
+
+**[⬆ back to top](#table-of-contents)**
+
+## <span id='infer'>infer</span>
+
+[comment]: <> (- [官网链接]&#40;https://www.typescriptlang.org/docs/handbook/utility-types.html#recordkeys-type&#41;)
+
+- 在 extends 条件语句中待推断的类型变量
+
+```typescript
+//如果 T 能赋值给 (...args: infer P) => any，则结果是 (...args: infer P) => any 类型中的参数 P，否则返回为 T
+type ParamType<T> = T extends (...args: infer P) => any ? P : T;
 ```
 
 **[⬆ back to top](#table-of-contents)**
