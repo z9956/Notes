@@ -1,7 +1,7 @@
 ## Table of Contents
 
 1. [useImperativeHandle](#useImperativeHandle)
-2. [normalize.css](#normalize.css)
+2. [normalize.css](#normalize)
 3. [setState 直接更新数组元素](#setState-array)
 4. [Code-Splitting](#Code-Splitting)
 5. [错误边界 Error Boundaries](#Error-Boundaries)
@@ -37,7 +37,7 @@ const MailFiles = forwardRef((props, ref) => {
 
 **[⬆ back to top](#table-of-contents)**
 
-## normalize.css
+## <span id='normalize'>normalize</span>
 
 - 使用 create-react-app 创建的项目,app.css 下添加
 
