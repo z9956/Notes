@@ -2,11 +2,12 @@
 
 1. [useImperativeHandle](#useImperativeHandle)
 2. [normalize.css](#normalize.css)
-3. [setState直接更新数组元素](#setState直接更新数组元素)
+3. [setState 直接更新数组元素](#setState-array)
 4. [Code-Splitting](#Code-Splitting)
-5. [错误边界 Error Boundaries](#错误边界-Error-Boundaries)
-6. [替换Moment ant design](#替换Moment-ant-design)
+5. [错误边界 Error Boundaries](#Error-Boundaries)
+6. [替换 Moment ant design](#Moment)
 7. [React-18](#React-18)
+8. [Property 'Search' does not exist on type 'ForwardRefExoticComponent>'](#ForwardRefExoticComponent)
 
 ## useImperativeHandle
 
@@ -46,7 +47,7 @@ const MailFiles = forwardRef((props, ref) => {
 
 **[⬆ back to top](#table-of-contents)**
 
-## setState直接更新数组元素
+## <span id='setState-array'>setState 直接更新数组元素</span>
 
 ```jsx
 this.setState({ [list[{ index }]]: item });
@@ -60,7 +61,7 @@ this.setState({ [list[{ index }]]: item });
 
 **[⬆ back to top](#table-of-contents)**
 
-## 错误边界 Error Boundaries ##
+## <span id='Error-Boundaries'>错误边界 Error Boundaries</span>
 
 - [官方文档](https://zh-hans.reactjs.org/docs/error-boundaries.html)
 
@@ -94,7 +95,7 @@ class ErrorBoundary extends React.Component {
 
 **[⬆ back to top](#table-of-contents)**
 
-## 替换Moment ant design ##
+## <span id='Moment'>替换 Moment ant design</span>
 
 - [ant design](https://ant.design/docs/react/replace-moment-cn#%E4%BD%BF%E7%94%A8%E8%87%AA%E5%AE%9A%E4%B9%89%E7%BB%84%E4%BB%B6)
 
@@ -126,6 +127,28 @@ export { default as DatePicker } from './DatePicker';
 		types: ['react/next', 'react-dom/next'],
 	},
 }
+```
+
+**[⬆ back to top](#table-of-contents)**
+
+## <span id='ForwardRefExoticComponent'>Property 'Search' does not exist on type 'ForwardRefExoticComponent>'</span>
+
+- [source code](https://github.com/z9956/simple-ui/blob/main/components/input/index.ts)
+- [DefinitelyTyped/issues/34757](https://github.com/DefinitelyTyped/DefinitelyTyped/issues/34757)
+
+```typescript jsx
+import Input from './Input';
+import Search from './Search';
+// const Input = React.forwardRef<HTMLInputElement, Props>((props, ref)...
+// const Search = React.forwardRef<HTMLInputElement, Props>((props, ref)...
+
+export type InputComponentType = typeof Input & {
+	Search: typeof Search;
+};
+
+(Input as InputComponentType).Search = Search;
+
+export default Input as InputComponentType;
 ```
 
 **[⬆ back to top](#table-of-contents)**
