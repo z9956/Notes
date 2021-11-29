@@ -9,3 +9,7 @@
 ### goland wsl2 配置环境
 
 ![Terminal](../images/bd0f1b2596718e0ce16651bae25ff00.png)
+
+### WebStorm 使用 wsl2 git
+
+![git](../images/1638180857330.png)

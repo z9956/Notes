@@ -2,6 +2,7 @@
 
 1. [ESLint](#ESLint)
 2. [Rollup](#Rollup)
+3. [husky](#husky)
 
 ## ESLint
 
@@ -38,6 +39,19 @@ export default {
   ],
   ...
 };
+```
+
+**[⬆ back to top](#table-of-contents)**
+
+## husky
+
+- Command not found
+
+```shell
+# ~/.huskyrc
+# This loads nvm.sh and sets the correct PATH before running hook
+export NVM_DIR="$HOME/.nvm"
+        [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 ```
 
 **[⬆ back to top](#table-of-contents)**
