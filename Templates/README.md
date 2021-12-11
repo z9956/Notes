@@ -5,10 +5,9 @@
 - [angular-template](https://github.com/z9956/angular-template)
 - [react-template](https://github.com/z9956/react-template)
 
-#### parcel
+#### vite
 
-- [parcel-template](https://github.com/z9956/parcel-template)
-- [parcel-react-ts-template](https://github.com/z9956/parcel-react-ts-template)
+- [react-vite-template](https://github.com/z9956/react-vite-template)
 
 #### rollup
 
