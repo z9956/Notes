@@ -10,6 +10,7 @@
 - [React](React/README.md)
 - [Regexp](Regexp/README.md)
 - [Templates](Templates/README.md)
+- [TypeScript](TypeScript/README.md)
 - [Ubuntu](Ubuntu/README.md)
 - [Utils](Utils/)
 - [WSL](WSL/README.md)
