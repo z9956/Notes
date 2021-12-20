@@ -4,6 +4,7 @@
 2. [crypto.randomUUID](#randomUUID)
 3. [Intl.DateTimeFormat](#DateTimeFormat)
 4. [Array.prototype.at](#at)
+5. [structuredClone](#structuredClone)
 
 ## <span id='in'>in</span>
 
@@ -56,6 +57,25 @@ const list = [5, 12, 8, 130, 44];
 console.log(list.at(-1)); // 44
 console.log(list.at(-2)); // 130
 console.log(list.at(0)); // 5
+```
+
+**[⬆ back to top](#table-of-contents)**
+
+## <span id='structuredClone'>structuredClone</span>
+
+- structuredClone 使用结构化克隆算法创建一个给定值的深度克隆
+- [structuredClone](https://developer.mozilla.org/en-US/docs/Web/API/structuredClone)
+
+```javascript
+const original = { name: 'MDN' };
+original.itself = original;
+
+// Clone it
+const clone = structuredClone(original);
+
+console.assert(clone !== original); // the objects are not the same (not same identity)
+console.assert(clone.name === 'MDN'); // they do have the same values
+console.assert(clone.itself === clone); // and the circular reference is preserved
 ```
 
 **[⬆ back to top](#table-of-contents)**
