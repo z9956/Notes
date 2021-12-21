@@ -8,6 +8,7 @@
 6. [替换 Moment ant design](#Moment)
 7. [React-18](#React-18)
 8. [Property 'Search' does not exist on type 'ForwardRefExoticComponent>'](#ForwardRefExoticComponent)
+9. [createPortal](#createPortal)
 
 ## useImperativeHandle
 
@@ -149,6 +150,16 @@ export type InputComponentType = typeof Input & {
 (Input as InputComponentType).Search = Search;
 
 export default Input as InputComponentType;
+```
+
+**[⬆ back to top](#table-of-contents)**
+
+## <span id='createPortal'>createPortal</span>
+
+- [官方文档](https://zh-hans.reactjs.org/docs/portals.html)
+
+```typescript jsx
+ReactDOM.createPortal(child, container);
 ```
 
 **[⬆ back to top](#table-of-contents)**
