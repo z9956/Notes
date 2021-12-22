@@ -9,6 +9,7 @@
 7. [React-18](#React-18)
 8. [Property 'Search' does not exist on type 'ForwardRefExoticComponent>'](#ForwardRefExoticComponent)
 9. [createPortal](#createPortal)
+10. [Type 'Timeout' is not assignable to type 'number'](#Timeout)
 
 ## useImperativeHandle
 
@@ -160,6 +161,21 @@ export default Input as InputComponentType;
 
 ```typescript jsx
 ReactDOM.createPortal(child, container);
+```
+
+**[⬆ back to top](#table-of-contents)**
+
+## <span id='Timeout'>Type 'Timeout' is not assignable to type 'number'</span>
+
+- [stackoverflow](https://stackoverflow.com/questions/55550096/ts2322-type-timeout-is-not-assignable-to-type-number-when-running-unit-te)
+
+```typescript jsx
+const timer = useRef<number>();
+
+timer.current = setTimeout(() => handler); //Type 'Timeout' is not assignable to type 'number'
+
+//window.setTimeout
+timer.current = window.setTimeout(() => handler);
 ```
 
 **[⬆ back to top](#table-of-contents)**
