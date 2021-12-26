@@ -13,7 +13,7 @@
 
 ## useImperativeHandle
 
-- [官方文档](#https://react.docschina.org/docs/hooks-reference.html#useimperativehandle)
+- [官方文档](https://react.docschina.org/docs/hooks-reference.html#useimperativehandle)
 - useImperativeHandle 可以让你在使用 ref 时自定义暴露给父组件的实例值。在大多数情况下，应当避免使用 ref 这样的命令式代码。useImperativeHandle 应当与 forwardRef 一起使用
 
 ```tsx
