@@ -5,7 +5,7 @@
 - [Configuration](Configuration/README.md)
 - [DesignPatterns](DesignPatterns/README.md)
 - [Git](Git/README.md)
-- [LeetCode](https://github.com/z9956/leetcode)
+- [LeetCode](https://github.com/z9956/LeetCode)
 - [Problems](Problems/FrontEnd.md)
 - [React](React/README.md)
 - [Regexp](Regexp/README.md)
