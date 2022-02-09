@@ -82,7 +82,7 @@
 }
 
 //.husky/pre-commit
-//npx --no-install pretty-quick --staged
+//npx pretty-quick --staged  or  npx --no-install pretty-quick --staged
 //or
 //yarn pretty-quick --staged
 ```
