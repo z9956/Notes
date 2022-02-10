@@ -5,6 +5,7 @@
 ## 清华源[https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/]
 
 - vim /etc/apt/sources.list
+- 如果有提示证书校验问题，先将 https 改为 http，然后再次运行 apt update
 
 ```shell
 # 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释
