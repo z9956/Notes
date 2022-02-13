@@ -1,6 +1,5 @@
-## Table of Contents
+### Notes
 
-- [algorithms](https://github.com/z9956/algorithms)
 - [Books](Books/README.md)
 - [Configuration](Configuration/README.md)
 - [DesignPatterns](DesignPatterns/README.md)
@@ -13,28 +12,43 @@
 - [Ubuntu](Ubuntu/README.md)
 - [WSL](WSL/README.md)
 - [Zsh](Zsh/README.md)
-- LeetCode
-  - [LeetCode](https://github.com/z9956/LeetCode)
-  - [LeetCode-Go](https://github.com/z9956/LeetCode-Go)
+
+### Algorithms
+
+- [algorithms](https://github.com/z9956/algorithms)
+- [LeetCode](https://github.com/z9956/LeetCode)
+- [LeetCode-Go](https://github.com/z9956/LeetCode-Go)
+
+### Front end
+
+- React
+
+  - [simple-ui](https://github.com/z9956/simple-ui)
+  - [simple-cli](https://github.com/z9956/simple-cli)
+  - [diy-react](https://github.com/z9956/diy-react)
+
+- Web Components
+
+  - [web-ui](https://github.com/z9956/web-ui)
+
+- Compiler
+
+  - [tiny-compiler](https://github.com/z9956/tiny-compiler)
+
 - Utils
+
   - [Utils](Utils/)
   - [react-utils](https://github.com/z9956/react-utils)
 
-[//]: # '### Front end'
-[//]: #
-[//]: # '- [date-format](https://github.com/z9956/date-format)'
-[//]: # '- [diy-fre](https://github.com/z9956/diy-fre)'
-[//]: # '- [diy-react](https://github.com/z9956/diy-react)'
-[//]: # '- [minipack](https://github.com/z9956/minipack)'
-[//]: # '- [simple-cli](https://github.com/z9956/simple-cli)'
-[//]: # '- [source-code](https://github.com/z9956/source-code)'
-[//]: # '- [tiny-compiler](https://github.com/z9956/tiny-compiler)'
-[//]: # '- [vision-cli](https://github.com/z9956/vision-cli)'
-[//]: #
-[//]: # '### golang'
-[//]: #
-[//]: # '- [go-learning](https://github.com/z9956/go-learning)'
-[//]: #
-[//]: # '### Rust'
-[//]: #
-[//]: # '- [rust-learning](https://github.com/z9956/rust-learning)'
+- Others
+  - [source-code](https://github.com/z9956/source-code)
+
+### Golang
+
+- [go-learning](https://github.com/z9956/go-learning)
+
+### Rust
+
+- [rust-learning](https://github.com/z9956/rust-learning)
+
+**[⬆ back to top](#Notes)**
