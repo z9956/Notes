@@ -6,15 +6,17 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
+
+  title: 'Notes',
+  tagline: '',
   url: 'https://your-docusaurus-test-site.com',
   baseUrl: '/',
+  deploymentBranch: "gh-pages",
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'z9956', // Usually your GitHub org/user name.
+  projectName: 'Notes', // Usually your repo name.
 
   presets: [
     [
@@ -22,6 +24,8 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
+          // routeBasePath: '/',
+          // path: './docs',
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
@@ -46,7 +50,7 @@ const config = {
         items: [
           {
             type: 'doc',
-            docId: 'README',
+            docId: 'Books',
             position: 'left',
             label: 'Notes',
           },
@@ -64,8 +68,8 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Tutorial',
-                to: '/docs/intro',
+                label: 'Notes',
+                to: '/docs/Books',
               },
             ],
           },
