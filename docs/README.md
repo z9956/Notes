@@ -6,7 +6,7 @@ sidebar_position: 1
 
 - [Books](Books.md)
 - [Configuration](Configuration/prettier.md)
-- [DesignPatterns](DesignPatterns/README.md)
+- [DesignPatterns](DesignPatterns/Abstract-Factory.md)
 - [Git](Git.md)
 - [Problems](Problems/FrontEnd.md)
 - [React](React.md)
@@ -41,7 +41,7 @@ sidebar_position: 1
 
 - Utils
 
-  - [Utils](Utils/)
+  - [Utils](https://github.com/z9956/Notes/Utils)
   - [react-utils](https://github.com/z9956/react-utils)
 
 - Others
