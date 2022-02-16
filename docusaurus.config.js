@@ -9,8 +9,8 @@ const config = {
 
   title: 'Notes',
   tagline: '',
-  url: 'https://your-docusaurus-test-site.com',
-  baseUrl: '/',
+  url: 'https://z9956.github.io/',
+  baseUrl: '/notes/',
   deploymentBranch: "gh-pages",
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
