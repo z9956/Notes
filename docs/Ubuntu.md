@@ -1,4 +1,4 @@
-## 清华源[https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/]
+## [清华源](https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/)
 
 - vim /etc/apt/sources.list
 - 如果有提示证书校验问题，先将 https 改为 http，然后再次运行 apt update

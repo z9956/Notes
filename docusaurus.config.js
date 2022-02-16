@@ -10,7 +10,7 @@ const config = {
   title: 'Notes',
   tagline: '',
   url: 'https://z9956.github.io/',
-  baseUrl: '/',
+  baseUrl: '/Notes/',
   deploymentBranch: "gh-pages",
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',

@@ -1,5 +1,3 @@
-## 阅读
-
 - [ ] [算法图解](https://github.com/egonSchiele/grokking_algorithms)
 - [ ] [你所不知道的 JavaScript 上中下](https://github.com/getify/You-Dont-Know-JS)
 - [ ] JavaScript DOM 编程艺术(第 2 版)
