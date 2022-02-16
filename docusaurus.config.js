@@ -10,7 +10,7 @@ const config = {
   title: 'Notes',
   tagline: '',
   url: 'https://notes-z9956.vercel.app/',
-  baseUrl: '/Notes/',
+  baseUrl: '/',
   // deploymentBranch: "gh-pages",
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
