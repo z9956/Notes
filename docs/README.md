@@ -6,7 +6,7 @@ sidebar_position: 1
 
 - [Books](Books.md)
 - [Configuration](Configuration/prettier.md)
-- [DesignPatterns](DesignPatterns/README.md)
+- [DesignPatterns](DesignPatterns/Abstract-Factory.md)
 - [Git](Git.md)
 - [Problems](Problems/FrontEnd.md)
 - [React](React.md)
