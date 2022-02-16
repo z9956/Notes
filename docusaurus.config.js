@@ -9,9 +9,9 @@ const config = {
 
   title: 'Notes',
   tagline: '',
-  url: 'https://z9956.github.io/',
+  url: 'https://notes-z9956.vercel.app/',
   baseUrl: '/Notes/',
-  deploymentBranch: "gh-pages",
+  // deploymentBranch: "gh-pages",
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
@@ -24,7 +24,7 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          // routeBasePath: '/',
+          routeBasePath: '/',
           // path: './docs',
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
