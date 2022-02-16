@@ -6,15 +6,15 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Notes',
-  tagline: '',
+  title: 'My Site',
+  tagline: 'Dinosaurs are cool',
   url: 'https://your-docusaurus-test-site.com',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'z9956', // Usually your GitHub org/user name.
-  projectName: 'Notes', // Usually your repo name.
+  organizationName: 'facebook', // Usually your GitHub org/user name.
+  projectName: 'docusaurus', // Usually your repo name.
 
   presets: [
     [
@@ -46,7 +46,7 @@ const config = {
         items: [
           {
             type: 'doc',
-            docId: 'Books',
+            docId: 'README',
             position: 'left',
             label: 'Notes',
           },
@@ -64,8 +64,8 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Notes',
-                to: '/docs/Books',
+                label: 'Tutorial',
+                to: '/docs/intro',
               },
             ],
           },
