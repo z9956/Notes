@@ -2,7 +2,7 @@
  * 获取文件大小
  * @param { number } size
  */
-const getFileSize = (size) => {
+export const getFileSize = (size) => {
 	let fileSize = size;
 	let count = 0;
 	let units = ['B', 'KB', 'MB', 'GB', 'TB'];

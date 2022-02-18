@@ -3,6 +3,6 @@
  * @param { any } value
  */
 
-const getType = (value) => {
+export const getType = (value) => {
 	return Object.prototype.toString.call(value).slice(8, -1).toLowerCase();
 };

@@ -37,7 +37,7 @@
 
 - Utils
 
-    - [Utils](Utils/)
+    - [Utils](src/utils/)
     - [react-utils](https://github.com/z9956/react-utils)
 
 - Others
