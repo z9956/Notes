@@ -13,7 +13,7 @@ const config = {
 	// deploymentBranch: "gh-pages",
 	onBrokenLinks: 'throw',
 	onBrokenMarkdownLinks: 'warn',
-	favicon: 'img/favicon.ico',
+	favicon: 'images/favicon.ico',
 	organizationName: 'z9956', // Usually your GitHub org/user name.
 	projectName: 'Notes', // Usually your repo name.
 
