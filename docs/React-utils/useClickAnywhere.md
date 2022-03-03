@@ -1,4 +1,4 @@
-import UseClickAnywhere from '../../src/components/UseClickAnywhere';
+import UseClickAnywhere from '../../src/components/useClickAnywhere';
 
 ## useClickAnywhere
 

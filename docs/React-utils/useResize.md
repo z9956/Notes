@@ -1,4 +1,4 @@
-import UseResize from '../../src/components/UseResize';
+import UseResize from '../../src/components/useResize';
 
 ## useResize
 
