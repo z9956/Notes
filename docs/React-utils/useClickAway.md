@@ -29,4 +29,5 @@ export default useClickAway;
 
 ## examples
 
+查看控制台输出
 <UseClickAway/>

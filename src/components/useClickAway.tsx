@@ -6,8 +6,6 @@ const UseClickAway = () => {
 
 	useClickAway(clickAwayRef, (e: Event) => {
 		console.log('Click away!', e);
-
-		alert('Click away!');
 	});
 
 	return (

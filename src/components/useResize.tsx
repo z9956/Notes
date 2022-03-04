@@ -6,7 +6,7 @@ const UseClickAway = () => {
 		console.log('window resize');
 	});
 
-	return <div>调整窗口大小，并查看控制台</div>;
+	return <div />;
 };
 
 export default UseClickAway;

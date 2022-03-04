@@ -4,8 +4,6 @@ import useClickAnywhere from '../hooks/useClickAnywhere';
 const UseClickAnywhere = () => {
 	useClickAnywhere((e: Event) => {
 		console.log('Click anywhere!', e);
-
-		alert('Click anywhere!');
 	});
 
 	return (
