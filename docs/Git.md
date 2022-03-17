@@ -26,4 +26,16 @@ git config --global init.detaultBranch main
 cat ~/.gitconfig
 ```
 
+## ssh: connect to host github.com port 22: Connection timed out fatal: Could not read from remote repository
+
+- [git 官网文档](https://docs.github.com/cn/authentication/troubleshooting-ssh/using-ssh-over-the-https-port)
+  ~/.ssh/config 文件加入一下内容
+
+```shell
+Host github.com
+Hostname ssh.github.com
+Port 443
+
+```
+
 ![Terminal](/images/git-default-branch.png)
