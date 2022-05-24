@@ -1,5 +1,9 @@
 import OnpasteComponent from '../../src/components/onpaste';
 
+## examples
+
+<OnpasteComponent/>
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -11,7 +15,9 @@ import OnpasteComponent from '../../src/components/onpaste';
 	<body>
 		<h3>按说明进行操作!</h3>
 		<label for="editor">
-			<textarea id="editor" rows="3" cols="80">尝试在这里粘贴(文本、图片)!</textarea>
+			<textarea id="editor" rows="3" cols="80">
+尝试在这里粘贴(文本、图片)!</textarea
+			>
 		</label>
 
 		<h3>Log</h3>
@@ -63,7 +69,3 @@ import OnpasteComponent from '../../src/components/onpaste';
 	</body>
 </html>
 ```
-
-## examples
-
-<OnpasteComponent/>

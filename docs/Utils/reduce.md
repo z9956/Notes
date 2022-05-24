@@ -1,5 +1,11 @@
 ## 数组对象去重
 
+## examples
+
+```javascript
+reduceArray([{ id: 1 }, { id: 2 }, { id: 1 }, { id: 3 }], 'id'); // [{ id: 1 }, { id: 2 }, { id: 3 }]
+```
+
 ```javascript
 const reduceArray = (repeatList = [], key = 'id') => {
 	let obj = {};
@@ -9,9 +15,4 @@ const reduceArray = (repeatList = [], key = 'id') => {
 		return acc;
 	}, []);
 };
-```
-
-## examples
-```javascript
-reduceArray([{ id: 1 }, { id: 2 }, { id: 1 }, { id: 3 }], 'id'); // [{ id: 1 }, { id: 2 }, { id: 3 }]
 ```

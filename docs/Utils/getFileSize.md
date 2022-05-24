@@ -2,6 +2,10 @@ import GetFileSizeComponent from '../../src/components/getFileSize';
 
 ## 获取文件大小
 
+## examples
+
+<GetFileSizeComponent/>
+
 ```javascript
 const getFileSize = (size) => {
 	let fileSize = size;
@@ -15,6 +19,3 @@ const getFileSize = (size) => {
 	return units[count] ? `${fileSize.toFixed(2)}${units[count]}` : size;
 };
 ```
-
-## examples
-<GetFileSizeComponent/>    

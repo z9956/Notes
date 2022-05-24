@@ -1,6 +1,10 @@
 import GetCssProperties from '../../src/components/getCssProperties';
 
-## 获取指定css属性支持的所有值
+## 获取指定 css 属性支持的所有值
+
+## examples
+
+<GetCssProperties/>
 
 ```javascript
 const getCssProperties = async (cssProp) => {
@@ -13,6 +17,3 @@ const getCssProperties = async (cssProp) => {
 	return property?.keywords;
 };
 ```
-
-## examples
-<GetCssProperties/>    

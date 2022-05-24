@@ -1,6 +1,10 @@
 import IsJSONComponent from '../../src/components/isJSON';
 
-## 判断是否为JSON
+## 判断是否为 JSON
+
+## examples
+
+<IsJSONComponent/>
 
 ```javascript
 const isJSON = (str) => {
@@ -16,6 +20,3 @@ const isJSON = (str) => {
 	console.log('It is not a string!');
 };
 ```
-
-## examples
-<IsJSONComponent/>    
