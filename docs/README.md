@@ -32,12 +32,15 @@ sidebar_position: 1
 - Others
   - [source-code](https://github.com/z9956/source-code)
 
-### Golang
+[//]: # (### Golang)
 
-- [go-learning](https://github.com/z9956/go-learning)
+[//]: # ()
+[//]: # (- [go-learning]&#40;https://github.com/z9956/go-learning&#41;)
 
-### Rust
+[//]: # ()
+[//]: # (### Rust)
 
-- [rust-learning](https://github.com/z9956/rust-learning)
+[//]: # ()
+[//]: # (- [rust-learning]&#40;https://github.com/z9956/rust-learning&#41;)
 
 **[⬆ back to top](#notes)**
