@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { isJSON } from '../utils/isJSON';
+import isJSON from '../utils/isJSON';
 
 const IsJSONComponent = () => {
 	const [value, setValue] = useState('');

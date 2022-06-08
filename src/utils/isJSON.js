@@ -2,7 +2,7 @@
  * 判断是否为JSON
  * @param { string } str 需要判断的数据
  */
-export const isJSON = (str) => {
+const isJSON = (str) => {
 	if (typeof str == 'string') {
 		try {
 			let obj = JSON.parse(str);
@@ -14,3 +14,5 @@ export const isJSON = (str) => {
 	}
 	console.log('It is not a string!');
 };
+
+export default isJSON;

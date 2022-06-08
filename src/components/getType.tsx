@@ -1,5 +1,5 @@
 import React from 'react';
-import { getType } from '../utils/getType';
+import getType from '../utils/getType';
 
 const types = [
 	'1',

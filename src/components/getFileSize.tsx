@@ -1,5 +1,5 @@
 import React from 'react';
-import { getFileSize } from '../utils/getFileSize';
+import getFileSize from '../utils/getFileSize';
 
 const sizes = [100, 200, 1000, 2000];
 
