@@ -6,6 +6,8 @@ import ColumnReverseComponent from '../../src/components/column-reverse';
 
 <ColumnReverseComponent/>
 
+## source code
+
 ```html
 <!DOCTYPE html>
 <html lang="en">

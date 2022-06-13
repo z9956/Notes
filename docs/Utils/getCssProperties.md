@@ -6,6 +6,8 @@ import GetCssProperties from '../../src/components/getCssProperties';
 
 <GetCssProperties/>
 
+## source code
+
 ```javascript
 const getCssProperties = async (cssProp) => {
 	const res = await fetch(

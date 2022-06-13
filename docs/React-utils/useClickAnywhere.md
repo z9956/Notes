@@ -1,6 +1,11 @@
 import UseClickAnywhere from '../../src/components/useClickAnywhere';
 
-## useClickAnywhere
+## examples
+
+查看控制台输出
+<UseClickAnywhere/>
+
+## source code
 
 ```typescript jsx
 import { useEffect } from 'react';
@@ -17,8 +22,3 @@ const useClickAnywhere = (handle: (event: Event) => void) => {
 
 export default useClickAnywhere;
 ```
-
-## examples
-
-查看控制台输出
-<UseClickAnywhere/>

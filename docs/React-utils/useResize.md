@@ -1,6 +1,11 @@
 import UseResize from '../../src/components/useResize';
 
-## useResize
+## examples
+
+查看控制台输出
+<UseResize/>
+
+## source code
 
 ```typescript jsx
 import { useEffect } from 'react';
@@ -19,8 +24,3 @@ const useResize = (callback: Function, immediatelyInvoke: boolean = true) => {
 
 export default useResize;
 ```
-
-## examples
-
-查看控制台输出
-<UseResize/>

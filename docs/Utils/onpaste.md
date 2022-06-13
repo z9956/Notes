@@ -4,6 +4,8 @@ import OnpasteComponent from '../../src/components/onpaste';
 
 <OnpasteComponent/>
 
+## source code
+
 ```html
 <!DOCTYPE html>
 <html lang="en">

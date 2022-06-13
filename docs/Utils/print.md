@@ -6,6 +6,8 @@ import PrintComponent from '../../src/components/print.tsx';
 
 <PrintComponent/>
 
+## source code
+
 ```jsx
 import React from 'react';
 

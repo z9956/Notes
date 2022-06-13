@@ -6,6 +6,8 @@ import IsJSONComponent from '../../src/components/isJSON';
 
 <IsJSONComponent/>
 
+## source code
+
 ```javascript
 const isJSON = (str) => {
 	if (typeof str == 'string') {

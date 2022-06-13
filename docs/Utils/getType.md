@@ -4,6 +4,8 @@ import GetTypeComponent from '../../src/components/getType';
 
 ## examples
 
+## source code
+
 <GetTypeComponent/>
 
 ```javascript

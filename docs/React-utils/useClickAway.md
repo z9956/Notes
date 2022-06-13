@@ -1,6 +1,11 @@
 import UseClickAway from '../../src/components/useClickAway';
 
-## useClickAway
+## examples
+
+查看控制台输出
+<UseClickAway/>
+
+## source code
 
 ```typescript jsx
 import { MutableRefObject, useEffect } from 'react';
@@ -26,8 +31,3 @@ const useClickAway = (
 
 export default useClickAway;
 ```
-
-## examples
-
-查看控制台输出
-<UseClickAway/>

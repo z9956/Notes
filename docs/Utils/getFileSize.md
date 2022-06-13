@@ -6,6 +6,8 @@ import GetFileSizeComponent from '../../src/components/getFileSize';
 
 <GetFileSizeComponent/>
 
+## source code
+
 ```javascript
 const getFileSize = (size) => {
 	let fileSize = size;

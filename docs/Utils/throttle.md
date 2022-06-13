@@ -7,18 +7,20 @@ import ThrottleComponent from '../../src/components/throttle';
 查看控制台输出
 <ThrottleComponent/>
 
+## source code
+
 ```javascript
 const debounce = (fun, time = 300) => {
-    let timer;
+	let timer;
 
-    return (...args) => {
-        if (timer) {
-            clearTimeout(timer);
-        }
+	return (...args) => {
+		if (timer) {
+			clearTimeout(timer);
+		}
 
-        timer = setTimeout(() => {
-            fun(args);
-        }, time);
-    };
+		timer = setTimeout(() => {
+			fun(args);
+		}, time);
+	};
 };
 ```
