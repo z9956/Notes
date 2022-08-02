@@ -1,7 +1,7 @@
 ## 安装依赖
 
 ```shell
-npm i -D husky prettier pretty-quick
+npm i -D husky prettier lint-staged
 ```
 
 ## 配置
@@ -17,11 +17,7 @@ npm set-script prepare "husky install"
 ## .husky/pre-commit
 
 ```shell
-npx pretty-quick --staged
-#or
-npx --no-install pretty-quick --staged
-#or
-yarn pretty-quick --staged
+yarn lint-staged
 ```
 
 ## .prettierrc
@@ -35,5 +31,14 @@ yarn pretty-quick --staged
 	useTabs: true,
 	singleQuote: true,
 	jsxBracketSameLine: true,
+}
+```
+
+## .lintstagedrc.json
+
+```json5
+{
+	'*.{js,jsx,ts,tsx,mjs}': ['eslint --fix'],
+	'*': ['prettier --ignore-unknown --write'],
 }
 ```
