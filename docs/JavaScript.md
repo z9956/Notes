@@ -61,3 +61,15 @@ console.assert(clone !== original); // the objects are not the same (not same id
 console.assert(clone.name === 'MDN'); // they do have the same values
 console.assert(clone.itself === clone); // and the circular reference is preserved
 ```
+
+## <span id='NumberFormat'>Intl.NumberFormat</span>
+
+- Intl.NumberFormat 是对语言敏感的格式化数字类的构造器类
+- [Intl.NumberFormat](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat)
+
+```javascript
+new Intl.NumberFormat().format(123456); //'123,456'
+new Intl.NumberFormat('zh-CN', { style: 'currency', currency: 'CNY' }).format(
+	123456,
+); // '¥123,456.00'
+```
