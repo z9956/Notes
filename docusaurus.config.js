@@ -42,7 +42,7 @@ const config = {
 				items: [
 					{
 						type: 'doc',
-						docId: 'Books',
+						docId: 'Todo',
 						position: 'left',
 						label: 'Notes',
 					},
@@ -61,38 +61,11 @@ const config = {
 						items: [
 							{
 								label: 'Notes',
-								to: '/docs/Books',
-							},
-						],
-					},
-					{
-						title: 'Community',
-						items: [
-							{
-								label: 'Stack Overflow',
-								href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-							},
-							{
-								label: 'Discord',
-								href: 'https://discordapp.com/invite/docusaurus',
-							},
-							{
-								label: 'Twitter',
-								href: 'https://twitter.com/docusaurus',
-							},
-						],
-					},
-					{
-						title: 'More',
-						items: [
-							{
-								label: 'GitHub',
-								href: 'https://github.com/facebook/docusaurus',
+								to: '/docs/Todo.md',
 							},
 						],
 					},
 				],
-				copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
 			},
 			prism: {
 				theme: lightCodeTheme,

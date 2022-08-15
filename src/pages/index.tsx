@@ -10,7 +10,7 @@ export default function Home() {
 
 	const History = useHistory();
 	useEffect(() => {
-		History.push('/docs/');
+		History.push('/docs/Todo');
 	}, []);
 
 	return (
