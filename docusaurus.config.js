@@ -61,7 +61,7 @@ const config = {
 						items: [
 							{
 								label: 'Notes',
-								to: '/docs/Todo.md',
+								to: '/docs/Todo',
 							},
 						],
 					},
