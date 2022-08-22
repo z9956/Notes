@@ -1,3 +1,32 @@
+## 100vh problem with iOS Safari
+
+```javascript
+//js
+const appHeight = () => {
+	const doc = document.documentElement;
+	doc.style.setProperty('--app-height', `${window.innerHeight}px`);
+};
+window.addEventListener('resize', appHeight);
+appHeight();
+```
+
+```css
+/*css*/
+:root {
+	--app-height: 100%;
+}
+
+html,
+body {
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+	width: 100vw;
+	height: 100vh;
+	height: var(--app-height);
+}
+```
+
 ## ESLint
 
 - @typescript-eslint/no-unused-vars
