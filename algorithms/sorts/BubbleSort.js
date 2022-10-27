@@ -26,4 +26,4 @@ const bubbleSortTwo = (items) => {
 	return items;
 };
 
-console.log(bubbleSortTwo([2, 3, 6, 1]));
+export default bubbleSort;

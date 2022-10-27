@@ -30,4 +30,4 @@ const mergeSort = (list) => {
 	return merge(mergeSort(left), mergeSort(right));
 };
 
-console.log(mergeSort([1, 3, 2, 4, 7, 8]));
+export default mergeSort;

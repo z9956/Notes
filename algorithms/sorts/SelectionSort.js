@@ -16,5 +16,4 @@ const selectionSort = (originalList) => {
 	return list;
 };
 
-console.log(selectionSort([3, 5, 7, 1]));
-console.log(selectionSort([1, 1, 23, 6, 4, 5, 0, 8, 5, 7, 1]));
+export default selectionSort;

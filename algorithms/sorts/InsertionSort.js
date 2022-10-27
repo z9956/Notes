@@ -17,5 +17,4 @@ function insertionSort(list) {
 
 	return list;
 }
-
-console.log(insertionSort([5, 4, 2, 7, 1, 2, 0, 1]));
+export default insertionSort;

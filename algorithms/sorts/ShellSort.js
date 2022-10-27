@@ -1,20 +1,28 @@
-function shellSort(arr) {
-	let len = arr.length,
-		temp,
-		gap = 1;
+/*
+ * 希尔排序
+ * */
+function shellSort(list) {
+	let interval = 1;
 
-	for (gap; gap > 0; gap = Math.floor(gap / 3)) {
-		for (let i = gap; i < len; i++) {
-			temp = arr[i];
-
-			let j = i - gap;
-
-			while (j >= 0 && arr[j] > temp) {
-				arr[j + gap] = arr[j];
-				j -= gap;
-			}
-			arr[j + gap] = temp;
-		}
+	while (interval < list.length / 3) {
+		interval = interval * 3 + 1;
 	}
-	return arr;
+
+	while (interval > 0) {
+		for (let i = interval; i < list.length; i++) {
+			const value = list[i];
+			let inner = i;
+
+			while (inner > interval - 1 && list[inner - interval] >= value) {
+				list[inner] = list[inner - interval];
+				inner = inner - interval;
+			}
+			list[inner] = value;
+		}
+		interval = (interval - 1) / 3;
+	}
+
+	return list;
 }
+
+export default shellSort;
