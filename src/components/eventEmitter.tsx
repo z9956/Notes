@@ -1,20 +1,20 @@
 import React from 'react';
-import Eventbus from '@site/src/utils/eventbus';
+import EventEmitter from '@site/src/utils/eventEmitter';
 
 const EventbusComponent = () => {
-	const eventbus = new Eventbus();
+	const eventEmitter = new EventEmitter();
 
 	const eventList = [
 		{
 			text: 'a event',
 			event: () => {
-				eventbus.emit('a', { a: 1 });
+				eventEmitter.emit('a', { a: 1 });
 			},
 		},
 		{
 			text: 'b once event',
 			event: () => {
-				eventbus.emit('b', 'b');
+				eventEmitter.emit('b', 'b');
 			},
 		},
 	];
@@ -27,11 +27,11 @@ const EventbusComponent = () => {
 		);
 	};
 
-	eventbus.on('a', (data) => {
+	eventEmitter.on('a', (data) => {
 		console.log({ data });
 	});
 
-	eventbus.once('b', () => {
+	eventEmitter.once('b', () => {
 		console.log('bbb');
 	});
 

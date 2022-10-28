@@ -1,4 +1,4 @@
-import EventbusComponent from '../../src/components/eventbus';
+import EventbusComponent from '../../src/components/eventEmitter';
 
 ## examples
 
@@ -8,7 +8,7 @@ import EventbusComponent from '../../src/components/eventbus';
 ## source code
 
 ```javascript
-class Eventbus {
+class EventEmitter {
 	constructor() {
 		this.listener = {};
 	}
@@ -51,5 +51,5 @@ class Eventbus {
 	}
 }
 
-export default Eventbus;
+export default EventEmitter;
 ```

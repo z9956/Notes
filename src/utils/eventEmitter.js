@@ -1,4 +1,4 @@
-class Eventbus {
+class EventEmitter {
 	constructor() {
 		this.listener = {};
 	}
@@ -41,4 +41,4 @@ class Eventbus {
 	}
 }
 
-export default Eventbus;
+export default EventEmitter;
