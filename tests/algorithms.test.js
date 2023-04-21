@@ -1,11 +1,11 @@
-const {
+import {
 	binarySearch,
 	bubbleSort,
 	insertionSort,
 	mergeSort,
 	quickSort,
 	selectionSort,
-} = require('./algorithms.js');
+} from './algorithms';
 
 describe('binarySearch', () => {
 	it('should sort arrays correctly', () => {
