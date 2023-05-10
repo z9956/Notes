@@ -99,13 +99,14 @@ sidebar_position: 1
 [//]: # '- [ ] 程序员的数学 1、2、3'
 [//]: # '- [ ] 离线数学及其应用'
 
-### 通关游戏
+### 游戏
 
 - [x] [Sifu](<https://zh.wikipedia.org/wiki/%E5%B8%88%E7%88%B6_(%E6%B8%B8%E6%88%8F)>)
 - [x] [艾尔登法环](https://zh.wikipedia.org/wiki/%E8%89%BE%E7%88%BE%E7%99%BB%E6%B3%95%E7%92%B0)
 - [x] [怪物猎人 崛起 曙光](https://zh.wikipedia.org/wiki/%E9%AD%94%E7%89%A9%E7%8D%B5%E4%BA%BA_%E5%B4%9B%E8%B5%B7)
 - [x] [卧龙：苍天陨落](https://zh.wikipedia.org/wiki/%E5%8D%A7%E9%BE%99%EF%BC%9A%E8%8B%8D%E5%A4%A9%E9%99%A8%E8%90%BD)
-- [ ] [空洞骑士](https://zh.wikipedia.org/zh-cn/%E7%A9%BA%E6%B4%9E%E9%A8%8E%E5%A3%AB)
+- [x] [空洞骑士](https://zh.wikipedia.org/zh-cn/%E7%A9%BA%E6%B4%9E%E9%A8%8E%E5%A3%AB)
+- [x] [星露谷物语](https://zh.wikipedia.org/zh-cn/%E6%98%9F%E9%9C%B2%E8%B0%B7%E7%89%A9%E8%AF%AD)
 - [ ] [塞尔达传说 旷野之息](https://zh.wikipedia.org/wiki/%E5%A1%9E%E5%B0%94%E8%BE%BE%E4%BC%A0%E8%AF%B4_%E6%97%B7%E9%87%8E%E4%B9%8B%E6%81%AF)
 - [ ] 塞尔达传说 王国之泪
 - [ ] [星之卡比 探索发现](https://zh.wikipedia.org/zh-cn/%E6%98%9F%E4%B9%8B%E5%8D%A1%E6%AF%94_%E6%8E%A2%E7%B4%A2%E7%99%BC%E7%8F%BE)
