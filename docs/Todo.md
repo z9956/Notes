@@ -112,6 +112,7 @@ sidebar_position: 1
 - [ ] [星之卡比 探索发现](https://zh.wikipedia.org/zh-cn/%E6%98%9F%E4%B9%8B%E5%8D%A1%E6%AF%94_%E6%8E%A2%E7%B4%A2%E7%99%BC%E7%8F%BE)
 - [ ] [只狼：影逝二度](https://zh.wikipedia.org/zh-cn/%E9%9A%BB%E7%8B%BC%EF%BC%9A%E6%9A%97%E5%BD%B1%E9%9B%99%E6%AD%BB)
 - [ ] [双人成行](https://zh.wikipedia.org/zh-cn/%E5%8F%8C%E4%BA%BA%E6%88%90%E8%A1%8C)
+- [ ] 胡闹厨房 2
 - [ ] [仁王 2](https://zh.wikipedia.org/wiki/%E4%BB%81%E7%8E%8B2)
 
 ### 电子垃圾
