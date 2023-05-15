@@ -1,13 +1,38 @@
 ## ufw
 
 ```shell
-ufw allow [port]
+ufw allow [port] /tcp #想要放行的端口
+ufw status numbered # 查询放行的端口
+ufw delete {行号} # 删除记录 建议删除v6相关
 ```
 
 ## scp
 
 ```shell
 scp -P [port] -r [file] [username]@[ip]:[path]
+```
+
+## vnStat
+
+```shell
+#查看系统上 vnStat 可以监控的所有可用接口
+vnstat --iflist
+
+#启动 vnstatd，它将在后台监视和记录这些信息
+vnstatd -d
+```
+
+## xray
+
+```shell
+sudo systemctl start xray
+sudo systemctl status xray
+sudo systemctl restart xray
+
+cat /usr/local/etc/xray/config.json
+
+#流量统计
+xray api statsquery --server=127.0.0.1:10080 #查看所有流量
 ```
 
 ## v2ray
