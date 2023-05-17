@@ -31,6 +31,9 @@ sudo systemctl restart xray
 
 cat /usr/local/etc/xray/config.json
 
+#查看xray
+ps -ef | grep vnst
+
 #流量统计
 xray api statsquery --server=127.0.0.1:10080 #查看所有流量
 ```
