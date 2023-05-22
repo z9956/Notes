@@ -22,6 +22,12 @@ vnstat --iflist
 vnstatd -d
 ```
 
+```shell
+netstat -na|grep ESTABLISHED #统计已连接上的，状态为 established
+
+netstat -nat|grep -i "80" #查看80端口连接
+```
+
 ## xray
 
 ```shell
@@ -36,6 +42,8 @@ ps -ef | grep vnst
 
 #流量统计
 xray api statsquery --server=127.0.0.1:10080 #查看所有流量
+#重置统计
+xray api restartlogger --server=127.0.0.1:10080
 ```
 
 ## v2ray
