@@ -6,6 +6,28 @@ ufw status numbered # 查询放行的端口
 ufw delete {行号} # 删除记录 建议删除v6相关
 ```
 
+## ssh
+
+```shell
+# 端口配置文件
+cat /etc/ssh/sshd_config
+
+# 重启 ssh 服务，让变更生效
+systemctl restart ssh
+```
+
+## systemctl
+
+```shell
+# 查看是否有 unit 加载失败
+systemctl --failed
+
+#列出所有active状态（运行或退出）的服务
+systemctl list-units --type=service --state=active
+systemctl list-units --type=service --state=running
+systemctl list-units --type=service --state=failed
+```
+
 ## scp
 
 ```shell
