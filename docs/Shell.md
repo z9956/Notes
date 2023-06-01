@@ -1,7 +1,7 @@
 ## ufw
 
 ```shell
-ufw allow [port] /tcp #想要放行的端口
+ufw allow [port]/tcp #想要放行的端口
 ufw status numbered # 查询放行的端口
 ufw delete {行号} # 删除记录 建议删除v6相关
 ```
@@ -85,7 +85,7 @@ vim /usr/local/etc/v2ray/config.json
 其他命令
 
 ```shell
- service v2ray start
+service v2ray start
 
 service v2ray stop
 
