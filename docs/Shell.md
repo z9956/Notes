@@ -50,6 +50,31 @@ netstat -na|grep ESTABLISHED #统计已连接上的，状态为 established
 netstat -nat|grep -i "80" #查看80端口连接
 ```
 
+## scoop
+
+```shell
+#设置代理
+scoop config proxy 127.0.0.1:10809
+#移除代理
+scoop config rm proxy
+
+#更换源，bucket源带上https://ghproxy.com/
+scoop config SCOOP_REPO 'https://ghproxy.com/https://github.com/ScoopInstaller/Scoop'
+
+#bucket源移除并重新添加
+scoop bucket rm main
+scoop bucket add main 'https://ghproxy.com/https://github.com/ScoopInstaller/Main'
+
+#使用Aria2多线程下载
+scoop install aria2
+
+#更新所有包
+scoop update *
+
+# 清除旧版本安装信息
+scoop cleanup *
+```
+
 ## xray
 
 ```shell
@@ -66,6 +91,20 @@ ps -ef | grep vnst
 xray api statsquery --server=127.0.0.1:10080 #查看所有流量
 #重置统计
 xray api restartlogger --server=127.0.0.1:10080
+```
+
+## git 代理
+
+socks5
+
+```shell
+git config --global http.proxy 'socks5://127.0.0.1:10808'
+```
+
+http
+
+```shell
+git config --global http.proxy 'http://127.0.0.1:10809'
 ```
 
 ## v2ray
@@ -91,25 +130,4 @@ service v2ray stop
 
 #查看v2ray
 ps aux | grep v2ray
-```
-
-## git 代理
-
-socks5
-
-```shell
-git config --global http.proxy 'socks5://127.0.0.1:10808'
-```
-
-http
-
-```shell
-git config --global http.proxy 'http://127.0.0.1:10809'
-```
-
-## scoop
-
-```shell
-scoop config proxy 127.0.0.1:10809
-scoop proxy 127.0.0.1:10809
 ```
