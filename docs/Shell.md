@@ -1,3 +1,11 @@
+## netstat
+
+```shell
+netstat -na|grep ESTABLISHED #统计已连接上的，状态为 established
+
+netstat -nat|grep -i "80" #查看80端口连接
+```
+
 ## ufw
 
 ```shell
@@ -42,12 +50,6 @@ vnstat --iflist
 
 #启动 vnstatd，它将在后台监视和记录这些信息
 vnstatd -d
-```
-
-```shell
-netstat -na|grep ESTABLISHED #统计已连接上的，状态为 established
-
-netstat -nat|grep -i "80" #查看80端口连接
 ```
 
 ## scoop
