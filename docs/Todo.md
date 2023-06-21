@@ -22,6 +22,7 @@ sidebar_position: 1
 - [x] 活着
 - [x] 许三观卖血记
 - [x] 兄弟
+- [ ] [被讨厌的勇气](https://book.douban.com/subject/26369699/)
 - [ ] 围城
 - [ ] 亲密关系
 - [ ] 非暴力沟通
