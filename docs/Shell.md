@@ -109,6 +109,12 @@ http
 git config --global http.proxy 'http://127.0.0.1:10809'
 ```
 
+## nginx
+
+```shell
+cat /etc/nginx/nginx.conf #配置文件位置
+```
+
 ## v2ray
 
 修改文件配置
