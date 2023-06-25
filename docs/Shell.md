@@ -113,14 +113,10 @@ git config --global http.proxy 'http://127.0.0.1:10809'
 
 ```shell
 cat /etc/nginx/nginx.conf #配置文件位置
-```
 
-## v2ray
+nginx -s reload #不中断服务，重新加载配置文件
 
-修改文件配置
-
-```shell
-vim /usr/local/etc/v2ray/config.json
+sudo systemctl restart nginx
 ```
 
 安装和更新
