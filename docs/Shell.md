@@ -91,8 +91,6 @@ ps -ef | grep vnst
 
 #流量统计
 xray api statsquery --server=127.0.0.1:10080 #查看所有流量
-#重置统计
-xray api restartlogger --server=127.0.0.1:10080
 ```
 
 ## git 代理
