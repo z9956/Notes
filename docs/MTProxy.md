@@ -1,8 +1,14 @@
-## 安装环境
+## 脚本安装 (启动、输出 MTProxy 代理链接见最下方)
+
+```shell
+wget https://github.com/9seconds/mtg/releases/download/v2.1.7/mtg-2.1.7-linux-amd64.tar.gz && tar -zxvf mtg-2.1.7-linux-amd64.tar.gz && cp mtg-2.1.7-linux-amd64/mtg /usr/local/bin/ && chmod a+x /usr/local/bin/mtg && vi /etc/systemd/system/mtg.service
+```
+
+## 手动安装(依赖环境)
 
 git go
 
-## 安装 mtg
+### 安装 mtg
 
 ```shell
 git clone https://github.com/9seconds/mtg.git
@@ -11,14 +17,14 @@ go build
 cp mtg /usr/local/bin
 ```
 
-## 生成密钥
+### 生成密钥
 
 ```shell
 # 这将返回一个ee开头的密钥，ee表示支持Fake TLS
 mtg generate-secret --hex namesilo.com
 ```
 
-## 为 mtg 创建一个系统服务文件
+### 为 mtg 创建一个系统服务文件
 
 ```shell
 vim /usr/lib/systemd/system/mtg.service
@@ -40,7 +46,7 @@ AmbientCapabilities=CAP_NET_BIND_SERVICE
 WantedBy=multi-user.target
 ```
 
-## 编辑 mtg 配置文件
+### 编辑 mtg 配置文件
 
 ```shell
 vim /etc/mtg.toml
@@ -50,7 +56,7 @@ secret = "生成的密钥"
 bind-to = "0.0.0.0:443"
 ```
 
-## 启动
+### 启动
 
 ```shell
 systemctl daemon-reload
@@ -58,7 +64,7 @@ systemctl enable mtg
 systemctl start mtg
 ```
 
-## 输出 MTProxy 代理链接
+### 输出 MTProxy 代理链接
 
 ```shell
 mtg access /etc/mtg.toml

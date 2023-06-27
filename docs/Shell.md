@@ -48,6 +48,9 @@ scp -P [port] -r [file] [username]@[ip]:[path]
 #查看系统上 vnStat 可以监控的所有可用接口
 vnstat --iflist
 
+#启动
+systemctl start vnstat
+
 #启动 vnstatd，它将在后台监视和记录这些信息
 vnstatd -d
 ```
@@ -115,21 +118,4 @@ cat /etc/nginx/nginx.conf #配置文件位置
 nginx -s reload #不中断服务，重新加载配置文件
 
 sudo systemctl restart nginx
-```
-
-安装和更新
-
-```shell
-# bash <(curl -L https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install-release.sh)
-```
-
-其他命令
-
-```shell
-service v2ray start
-
-service v2ray stop
-
-#查看v2ray
-ps aux | grep v2ray
 ```
