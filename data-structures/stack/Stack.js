@@ -1,3 +1,4 @@
+//栈 stack」是一种遵循先入后出的逻辑的线性数据结构
 class Stack {
 	constructor() {
 		this.stack = [];
