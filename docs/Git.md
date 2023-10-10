@@ -1,3 +1,13 @@
+## 修改已经 push 的 commit 信息
+
+```shell
+#运行命令进入vim编辑器
+git commit --amend
+
+#强制提交
+git push -f
+```
+
 ## git sparse checkout
 
 ```shell
