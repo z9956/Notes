@@ -14,6 +14,13 @@ ufw status numbered # 查询放行的端口
 ufw delete {行号} # 删除记录 建议删除v6相关
 ```
 
+## 忽略 ICMP 回应(ping)请求
+
+```shell
+echo net.ipv4.icmp_echo_ignore_all=0 >> /etc/sysctl.conf
+sysctl -p
+```
+
 ## ssh
 
 ```shell
