@@ -126,3 +126,18 @@ nginx -s reload #不中断服务，重新加载配置文件
 
 sudo systemctl restart nginx
 ```
+
+## [内核优化 XanMod](https://xanmod.org/)
+
+```shell
+wget -qO - https://dl.xanmod.org/archive.key | sudo gpg --dearmor -o /usr/share/keyrings/xanmod-archive-keyring.gpg
+
+echo 'deb [signed-by=/usr/share/keyrings/xanmod-archive-keyring.gpg] http://deb.xanmod.org releases main' | sudo tee /etc/apt/sources.list.d/xanmod-release.list
+
+#v3会炸机器
+sudo apt update && sudo apt install linux-xanmod-x64v2
+
+reboot
+
+bash startup.sh
+```
