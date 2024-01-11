@@ -5,7 +5,7 @@ import {
 	mergeSort,
 	quickSort,
 	selectionSort,
-} from './algorithms';
+} from './sorts';
 
 describe('binarySearch', () => {
 	it('should sort arrays correctly', () => {
