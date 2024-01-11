@@ -9,14 +9,14 @@ cat /etc/resolv.conf | grep nameserver | awk '{ print $2 }'
 
 ### clion wsl2 配置环境
 
-![打开Experimental Features](/images/20210925185844.png)
-![开启org.rust.wsl选项](/images/20210925185851.png)
-![Terminal](/images/20211016232945.png)
+![打开Experimental Features](/img/20210925185844.png)
+![开启org.rust.wsl选项](/img/20210925185851.png)
+![Terminal](/img/20211016232945.png)
 
 ### goland wsl2 配置环境
 
-![Terminal](/images/bd0f1b2596718e0ce16651bae25ff00.png)
+![Terminal](/img/bd0f1b2596718e0ce16651bae25ff00.png)
 
 ### WebStorm 使用 wsl2 git
 
-![git](/images/1638180857330.png)
+![git](/img/1638180857330.png)

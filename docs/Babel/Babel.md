@@ -8,4 +8,4 @@ babel 是 source to source 的转换，整体编译流程分为三步：
 
 ## JS Parser 的历史
 
-![JS Parser历史](/images/1ac411a03bbe9068877062c131fefbe.png)
+![JS Parser历史](/img/1ac411a03bbe9068877062c131fefbe.png)

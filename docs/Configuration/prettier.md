@@ -1,23 +1,10 @@
 ## 安装依赖
 
 ```shell
-npm i -D husky prettier lint-staged
-```
-
-## 配置
-
-```shell
+npm install --save-dev husky lint-staged
 npx husky install
-```
-
-```shell
-npm set-script prepare "husky install"
-```
-
-## .husky/pre-commit
-
-```shell
-yarn lint-staged
+npm pkg set scripts.prepare="husky install"
+npx husky add .husky/pre-commit "npx lint-staged"
 ```
 
 ## .prettierrc

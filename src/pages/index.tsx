@@ -1,14 +1,15 @@
-import React, { useEffect } from 'react';
-import Layout from '@theme/Layout';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import { useHistory } from '@docusaurus/router';
+import Layout from '@theme/Layout';
 
 import styles from './index.module.css';
+import { useHistory } from '@docusaurus/router';
+import { useEffect } from 'react';
 
 export default function Home() {
 	const { siteConfig } = useDocusaurusContext();
 
 	const History = useHistory();
+
 	useEffect(() => {
 		History.push('/docs/Todo');
 	}, []);

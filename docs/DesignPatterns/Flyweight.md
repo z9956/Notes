@@ -26,5 +26,4 @@ colorFactory.create('red');
 colorFactory.create('red');
 colorFactory.create('blue');
 colorFactory.create('blue');
-
 ```

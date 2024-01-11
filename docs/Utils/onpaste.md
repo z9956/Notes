@@ -7,7 +7,7 @@ import OnpasteComponent from '../../src/components/onpaste';
 ## source code
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />

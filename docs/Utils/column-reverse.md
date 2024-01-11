@@ -9,7 +9,7 @@ import ColumnReverseComponent from '../../src/components/column-reverse';
 ## source code
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />

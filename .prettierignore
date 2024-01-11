@@ -1,0 +1,6 @@
+**/.git
+
+.husky
+.idea
+node_modules
+
