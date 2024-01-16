@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import scrollFun from '../utils/scrollFun';
 
 const ScrollFun = () => {

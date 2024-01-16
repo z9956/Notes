@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import getIsMobile from '@site/src/utils/getIsMobile';
 
 const GetIsMobileComponent = () => {

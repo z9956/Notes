@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import getGreetingTime from '@site/src/utils/getGreetingTime';
 
 const GetGreetingTimeDemo = () => {

@@ -1,4 +1,4 @@
-import React, { CSSProperties, useEffect } from 'react';
+import { CSSProperties, useEffect } from 'react';
 
 const listStyles: CSSProperties = {
 	width: '200px',

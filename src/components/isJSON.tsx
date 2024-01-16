@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import isJSON from '../utils/isJSON';
 
 const IsJSONComponent = () => {

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import useStateListeningProp from '../hooks/useStateListeningProp';
 
 type User = { id: string; name: string };

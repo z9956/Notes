@@ -1,4 +1,4 @@
-import React, { ChangeEvent, useEffect, useState } from 'react';
+import { ChangeEvent, useEffect, useState } from 'react';
 
 const GetCssProperties = () => {
 	const [cssProperties, setCssProperties] = useState(null);
