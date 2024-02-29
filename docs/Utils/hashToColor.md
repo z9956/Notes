@@ -6,4 +6,4 @@ import HashToColorComponent from '../../src/components/hashToColor';
 
 <HashToColorComponent/>
 
-## [source code](https://github.com/stuneak/create-color/blob/master/src/index.js)
+## [source code](https://github.com/z9956/Notes/blob/main/src/utils/hashToColor.js)
