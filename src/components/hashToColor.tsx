@@ -42,6 +42,7 @@ const HashToColorComponent = () => {
 			<button onClick={() => handleGenerateUuid()}>Generate uuid</button>
 			<br />
 			<input
+				style={{ width: 400 }}
 				type="text"
 				value={value}
 				onChange={(e) => setValue(e.target.value.trim())}
@@ -53,7 +54,7 @@ const HashToColorComponent = () => {
 			<div
 				style={{ width: 400, textAlign: 'center', fontSize: 14, color: '#fff' }}
 			>
-				<h4 style={{ color: 'gray' }}>{value}</h4>
+				<h4 style={{ color: 'gray', height: 20 }}>{value}</h4>
 				{Object.keys(allFormats).map((color) => {
 					const textColor = allFormats[color]();
 					console.error('textColor', textColor);
