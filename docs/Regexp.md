@@ -1,3 +1,7 @@
+---
+sidebar_position: 9
+---
+
 ## 输入正数和小数(保留两位)
 
 ```javascript

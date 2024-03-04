@@ -1,3 +1,7 @@
+---
+sidebar_position: 8
+---
+
 ## Parameters
 
 - [官网链接](https://www.typescriptlang.org/docs/handbook/utility-types.html#parameterstype)
