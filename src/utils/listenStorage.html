@@ -20,7 +20,7 @@
 			};
 
 			window.addEventListener('listenStorage', (event) => {
-				console.log(event.key, event.newValue, event);
+				console.log('listenStorage', event.key, event.newValue, event);
 			});
 
 			button.onclick = () => {
