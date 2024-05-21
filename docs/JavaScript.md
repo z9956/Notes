@@ -33,7 +33,7 @@ console.log(uuid); // for example "36b8f84d-df4e-4d49-b662-bcde71a8764f"
 const date = new Date();
 
 console.log(new Intl.DateTimeFormat('en-US').format(date)); // expected output: '12/17/2021'
-console.log(new Intl.DateTimeFormat('zh-CN').format(new D())); // expected output: '2021/12/17'
+console.log(new Intl.DateTimeFormat('zh-CN').format(new Date())); // expected output: '2021/12/17'
 ```
 
 ## <span id='at'>Array.prototype.at</span>
