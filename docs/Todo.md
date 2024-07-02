@@ -160,6 +160,7 @@ sidebar_position: 0
   - 鑫谷 GX650W金牌全模组
   - 金百达银爵 3600 长鑫 A代C18 8G\*4
   - 三星 1TB 980 PRO
+  - 海力士 P41 2TB
   - 墨将彩虹 2 pro 手柄
 
 **[⬆ back to top](#技术书单)**
