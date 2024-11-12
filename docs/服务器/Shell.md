@@ -2,17 +2,11 @@
 sidebar_position: 1
 ---
 
-## netstat
-
-```shell
-netstat -na|grep ESTABLISHED #统计已连接上的，状态为 established
-
-netstat -nat|grep -i "80" #查看80端口连接
-```
-
 ## ufw
 
 ```shell
+ufw enable
+
 ufw allow [port]/tcp #想要放行的端口
 ufw status numbered # 查询放行的端口
 ufw delete {行号} # 删除记录 建议删除v6相关
@@ -21,7 +15,7 @@ ufw delete {行号} # 删除记录 建议删除v6相关
 ## 忽略 ICMP 回应(ping)请求
 
 ```shell
-echo net.ipv4.icmp_echo_ignore_all=0 >> /etc/sysctl.conf
+echo net.ipv4.icmp_echo_ignore_all=1 >> /etc/sysctl.conf
 sysctl -p
 ```
 
@@ -64,31 +58,6 @@ systemctl start vnstat
 
 #启动 vnstatd，它将在后台监视和记录这些信息
 vnstatd -d
-```
-
-## scoop
-
-```shell
-#设置代理
-scoop config proxy 127.0.0.1:10809
-#移除代理
-scoop config rm proxy
-
-#更换源，bucket源带上https://ghproxy.com/
-scoop config SCOOP_REPO 'https://ghproxy.com/https://github.com/ScoopInstaller/Scoop'
-
-#bucket源移除并重新添加
-scoop bucket rm main
-scoop bucket add main 'https://ghproxy.com/https://github.com/ScoopInstaller/Main'
-
-#使用Aria2多线程下载
-scoop install aria2
-
-#更新所有包
-scoop update *
-
-# 清除旧版本安装信息
-scoop cleanup *
 ```
 
 ## xray
@@ -134,6 +103,14 @@ nginx -s reload #不中断服务，重新加载配置文件
 sudo systemctl restart nginx
 ```
 
+## netstat
+
+```shell
+netstat -na|grep ESTABLISHED #统计已连接上的，状态为 established
+
+netstat -nat|grep -i "80" #查看80端口连接
+```
+
 ## [内核优化 XanMod](https://xanmod.org/)
 
 ```shell
@@ -146,5 +123,30 @@ sudo apt update && sudo apt install linux-xanmod-x64v2
 
 reboot
 
-bash startup.sh
+sysctl -p
+```
+
+## scoop
+
+```shell
+#设置代理
+scoop config proxy 127.0.0.1:10809
+#移除代理
+scoop config rm proxy
+
+#更换源，bucket源带上https://ghproxy.com/
+scoop config SCOOP_REPO 'https://ghproxy.com/https://github.com/ScoopInstaller/Scoop'
+
+#bucket源移除并重新添加
+scoop bucket rm main
+scoop bucket add main 'https://ghproxy.com/https://github.com/ScoopInstaller/Main'
+
+#使用Aria2多线程下载
+scoop install aria2
+
+#更新所有包
+scoop update *
+
+# 清除旧版本安装信息
+scoop cleanup *
 ```
