@@ -79,18 +79,13 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 xray api statsquery --server=127.0.0.1:10080 #查看所有流量
 ```
 
-## git 代理
-
-socks5
+## haproxy
 
 ```shell
-git config --global http.proxy 'socks5://127.0.0.1:10808'
-```
+#配置文件位置
+cat /etc/haproxy/haproxy.cfg
 
-http
-
-```shell
-git config --global http.proxy 'http://127.0.0.1:10809'
+sudo systemctl restart haproxy
 ```
 
 ## nginx
@@ -155,4 +150,18 @@ scoop update *
 
 # 清除旧版本安装信息
 scoop cleanup *
+```
+
+## git 代理
+
+socks5
+
+```shell
+git config --global http.proxy 'socks5://127.0.0.1:10808'
+```
+
+http
+
+```shell
+git config --global http.proxy 'http://127.0.0.1:10809'
 ```
