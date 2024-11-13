@@ -1,0 +1,36 @@
+/*.wrap {*/
+/*	table {*/
+/*		width: 100%;*/
+/*		border-collapse: collapse;*/
+/*		text-align: center;*/
+/*	}*/
+/*	th,*/
+/*	td {*/
+/*		border: 1px solid #ddd;*/
+/*		padding: 8px;*/
+/*		font-size: 14px;*/
+/*		min-width: 100px;*/
+/*	}*/
+/*	th {*/
+/*		background-color: #f4f4f8;*/
+/*		color: #333;*/
+/*	}*/
+/*}*/
+
+.table {
+	width: 100%;
+	border-collapse: collapse;
+	text-align: center;
+
+	th,
+	td {
+		border: 1px solid #ddd;
+		padding: 8px;
+		font-size: 14px;
+		min-width: 100px;
+	}
+	th {
+		background-color: #f4f4f8;
+		color: #333;
+	}
+}

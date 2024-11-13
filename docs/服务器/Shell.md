@@ -103,6 +103,12 @@ nginx -s reload #不中断服务，重新加载配置文件
 sudo systemctl restart nginx
 ```
 
+## Prometheus
+
+```shell
+nohup /usr/local/bin/prometheus/prometheus --config.file /usr/local/bin/prometheus/prometheus.yml --web.external-url=/xray > /var/log/prometheus.log 2>&1 &
+```
+
 ## netstat
 
 ```shell
