@@ -1,6 +1,6 @@
 import PrintComponent from '../../src/components/print.tsx';
 
-## css 设置滚动条默认至最底部
+## 打印
 
 ## examples
 
