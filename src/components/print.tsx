@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
+
+//分页
+const pageBreak = document.createElement('div');
+pageBreak.style.pageBreakBefore = 'always';
 
 const PrintComponent = () => {
-	const data = {
-		title: 'content',
-	};
+	const [isPageBreak, setIsPageBreak] = useState(false);
 
 	const handlePrint = () => {
 		//判断iframe是否存在，不存在则创建iframe
@@ -17,6 +19,13 @@ const PrintComponent = () => {
 			'style',
 			'position:absolute;width:0px;height:0px;left:-500px;top:-500px;',
 		);
+
+		//分页
+		if (isPageBreak) {
+			pageBreak.innerHTML = '测试分页';
+			el.appendChild(pageBreak);
+		}
+
 		document.body.appendChild(iframe);
 		doc = iframe.contentWindow.document;
 		//这里可以自定义样式
@@ -33,8 +42,16 @@ const PrintComponent = () => {
 		}
 	};
 
+	const handleCheckBox = ({ target: { checked } }) => {
+		setIsPageBreak(checked);
+	};
+
 	return (
 		<div>
+			<div>
+				是否分页：
+				<input type="checkbox" value={isPageBreak} onChange={handleCheckBox} />
+			</div>
 			<button type="submit" class="print" onClick={handlePrint}>
 				print
 			</button>
