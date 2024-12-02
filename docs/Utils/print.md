@@ -1,4 +1,4 @@
-import PrintComponent from '../../src/components/print.tsx';
+import PrintComponent from '../../src/components/print';
 
 ## 打印
 

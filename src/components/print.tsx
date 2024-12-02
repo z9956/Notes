@@ -1,9 +1,5 @@
 import React, { useState } from 'react';
 
-//分页
-const pageBreak = document.createElement('div');
-pageBreak.style.pageBreakBefore = 'always';
-
 const PrintComponent = () => {
 	const [isPageBreak, setIsPageBreak] = useState(false);
 
@@ -22,6 +18,9 @@ const PrintComponent = () => {
 
 		//分页
 		if (isPageBreak) {
+			//分页
+			const pageBreak = document.createElement('div');
+			pageBreak.style.pageBreakBefore = 'always';
 			pageBreak.innerHTML = '测试分页';
 			el.appendChild(pageBreak);
 		}
