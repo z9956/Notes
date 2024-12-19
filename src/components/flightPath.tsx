@@ -124,7 +124,13 @@ const FlightAnimation = () => {
 	};
 
 	const flightPathSegments = useMemo(() => {
-		return flightPath.map((segment) => segment.positions);
+		const nextFlightPath = [];
+		flightPath.map((segment) => {
+			if (segment.positions) {
+				nextFlightPath.push(segment.positions);
+			}
+		});
+		return nextFlightPath;
 	}, [flightPath]);
 
 	return (
@@ -184,7 +190,7 @@ const FlightAnimation = () => {
 				)}
 
 				{/* 更新飞行路径，逐步变为实线 */}
-				{flightPath.length > 0 && (
+				{dashedLine.length !== flightPath.length && (
 					<Polyline
 						positions={flightPathSegments}
 						color="blue"
