@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useMemo, useRef } from 'react';
+import useIsBrowser from '@docusaurus/useIsBrowser';
 import {
 	MapContainer,
 	TileLayer,
@@ -8,7 +9,6 @@ import {
 } from 'react-leaflet';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
-import BrowserOnly from '@docusaurus/BrowserOnly';
 
 const locations = {
 	shanghai: [31.2304, 121.4737],
@@ -117,6 +117,12 @@ const FlightAnimation = () => {
 
 	const startCoords = locations[startLocation];
 	const endCoords = locations[endLocation];
+
+	const isBrowser = useIsBrowser();
+
+	if (!isBrowser) {
+		return null; // 或者返回一个loading提示
+	}
 
 	// 飞机图标
 	const airplaneIcon = L.icon({
@@ -270,4 +276,4 @@ const FlightAnimation = () => {
 	);
 };
 
-export default <BrowserOnly>{() => <FlightAnimation />}</BrowserOnly>;
+export default FlightAnimation;
