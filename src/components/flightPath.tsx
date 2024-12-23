@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useMemo, useRef } from 'react';
+import BrowserOnly from '@docusaurus/BrowserOnly';
 import {
 	MapContainer,
 	TileLayer,
@@ -163,46 +164,50 @@ const FlightAnimation = () => {
 				))}
 			</select>
 
-			<MapContainer
-				center={startCoords}
-				zoom={4}
-				style={{ width: '100%', height: '500px' }}
-			>
-				<TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
+			<BrowserOnly>
+				{() => (
+					<MapContainer
+						center={startCoords}
+						zoom={4}
+						style={{ width: '100%', height: '500px' }}
+					>
+						<TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
 
-				<Marker position={startCoords}>
-					<Popup>{keyToText[startLocation]}</Popup>
-				</Marker>
+						<Marker position={startCoords}>
+							<Popup>{keyToText[startLocation]}</Popup>
+						</Marker>
 
-				<Marker position={endCoords}>
-					<Popup>{keyToText[endLocation]}</Popup>
-				</Marker>
+						<Marker position={endCoords}>
+							<Popup>{keyToText[endLocation]}</Popup>
+						</Marker>
 
-				{/* 初始虚线路径 */}
-				{flightPath.length <= 100 && (
-					<Polyline
-						positions={dashedLine}
-						color="blue"
-						weight={2}
-						opacity={0.7}
-						dashArray="10, 10"
-					/>
+						{/* 初始虚线路径 */}
+						{flightPath.length <= 100 && (
+							<Polyline
+								positions={dashedLine}
+								color="blue"
+								weight={2}
+								opacity={0.7}
+								dashArray="10, 10"
+							/>
+						)}
+
+						{/* 更新飞行路径，逐步变为实线 */}
+						{dashedLine.length !== flightPath.length && (
+							<Polyline
+								positions={flightPathSegments}
+								color="blue"
+								weight={2}
+								opacity={0.7}
+							/>
+						)}
+
+						<Marker position={flightPosition} icon={airplaneIcon}>
+							<Popup>飞机</Popup>
+						</Marker>
+					</MapContainer>
 				)}
-
-				{/* 更新飞行路径，逐步变为实线 */}
-				{dashedLine.length !== flightPath.length && (
-					<Polyline
-						positions={flightPathSegments}
-						color="blue"
-						weight={2}
-						opacity={0.7}
-					/>
-				)}
-
-				<Marker position={flightPosition} icon={airplaneIcon}>
-					<Popup>飞机</Popup>
-				</Marker>
-			</MapContainer>
+			</BrowserOnly>
 		</div>
 	);
 };
