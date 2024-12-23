@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useMemo, useRef } from 'react';
-import BrowserOnly from '@docusaurus/BrowserOnly';
 import {
 	MapContainer,
 	TileLayer,
@@ -9,6 +8,7 @@ import {
 } from 'react-leaflet';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
+import BrowserOnly from '@docusaurus/BrowserOnly';
 
 const locations = {
 	shanghai: [31.2304, 121.4737],
@@ -225,52 +225,49 @@ const FlightAnimation = () => {
 					</option>
 				))}
 			</select>
-			<BrowserOnly>
-				{() => (
-					<MapContainer
-						center={startCoords}
-						zoom={4}
-						style={{ width: '100%', height: '500px' }}
-					>
-						<TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
 
-						<Marker position={startCoords}>
-							<Popup>{keyToText[startLocation]}</Popup>
-						</Marker>
+			<MapContainer
+				center={startCoords}
+				zoom={4}
+				style={{ width: '100%', height: '500px' }}
+			>
+				<TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
 
-						<Marker position={endCoords}>
-							<Popup>{keyToText[endLocation]}</Popup>
-						</Marker>
+				<Marker position={startCoords}>
+					<Popup>{keyToText[startLocation]}</Popup>
+				</Marker>
 
-						{/* 初始虚线路径 */}
-						{dashedLine.length !== flightPath.length && (
-							<Polyline
-								positions={dashedLine}
-								color="blue"
-								weight={2}
-								opacity={0.7}
-								dashArray="10, 10"
-							/>
-						)}
+				<Marker position={endCoords}>
+					<Popup>{keyToText[endLocation]}</Popup>
+				</Marker>
 
-						{/* 更新飞行路径，逐步变为实线 */}
-						{flightPath.length > 0 && (
-							<Polyline
-								positions={flightPathSegments}
-								color="blue"
-								weight={2}
-								opacity={0.7}
-							/>
-						)}
-
-						<Marker position={flightPosition} icon={airplaneIcon}>
-							<Popup>飞机</Popup>
-						</Marker>
-					</MapContainer>
+				{/* 初始虚线路径 */}
+				{dashedLine.length !== flightPath.length && (
+					<Polyline
+						positions={dashedLine}
+						color="blue"
+						weight={2}
+						opacity={0.7}
+						dashArray="10, 10"
+					/>
 				)}
-			</BrowserOnly>
+
+				{/* 更新飞行路径，逐步变为实线 */}
+				{flightPath.length > 0 && (
+					<Polyline
+						positions={flightPathSegments}
+						color="blue"
+						weight={2}
+						opacity={0.7}
+					/>
+				)}
+
+				<Marker position={flightPosition} icon={airplaneIcon}>
+					<Popup>飞机</Popup>
+				</Marker>
+			</MapContainer>
 		</div>
 	);
 };
 
-export default FlightAnimation;
+export default <BrowserOnly>{() => <FlightAnimation />}</BrowserOnly>;
