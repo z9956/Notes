@@ -1,4 +1,4 @@
-import FlightPathComponent from '../../src/components/flightPath';
+import FlightPathComponent from '../../src/components/expressPath/flightPath';
 
 ## 航班路径 直线 (坐标icon仅在docusaurus项目显示异常)
 
@@ -10,4 +10,5 @@ import FlightPathComponent from '../../src/components/flightPath';
 
 <FlightPathComponent/>
 
-## [source code](https://github.com/z9956/Notes/blob/main/src/utils/航班路径_直线.html)
+## [html版源码](https://github.com/z9956/Notes/blob/main/src/utils/航班路径_直线.html)
+## [react版源码](https://github.com/z9956/Notes/blob/main/src/components/expressPath/flightPath.tsx)

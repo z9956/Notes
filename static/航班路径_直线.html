@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>航线动画</title>
+    <link href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" rel="stylesheet"/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <style>
+        #map {
+            width: 100%;
+            height: 500px;
+        }
+    </style>
+</head>
+<body>
+
+<div style="margin: 20px;">
+    <label for="start-location">选择A地点：</label>
+    <select id="start-location">
+        <option value="shanghai">上海</option>
+        <option value="tokyo">东京</option>
+        <option value="seoul">首尔</option>
+        <option value="hongkong">香港</option>
+        <option value="taipei">台北</option>
+        <option value="sydney">悉尼</option>
+        <option value="auckland">奥克兰</option>
+        <option value="kualaLumpur">吉隆坡</option>
+        <option value="singapore">新加坡</option>
+    </select>
+
+    <label for="end-location" style="margin-left: 20px;">选择B地点：</label>
+    <select id="end-location">
+        <option value="tokyo">东京</option>
+        <option value="seoul">首尔</option>
+        <option value="shanghai">上海</option>
+        <option value="hongkong">香港</option>
+        <option value="taipei">台北</option>
+        <option value="sydney">悉尼</option>
+        <option value="auckland">奥克兰</option>
+        <option value="kualaLumpur">吉隆坡</option>
+        <option value="singapore">新加坡</option>
+    </select>
+    <button onclick="updateMap()">更新地图</button>
+</div>
+<div id="map"></div>
+
+<script>
+    const locations = {
+        shanghai: [31.2304, 121.4737], // 上海
+        tokyo: [35.6762, 139.6503],   // 东京
+        seoul: [37.5665, 126.9780],   // 首尔
+        hongkong: [22.3193, 114.1694], // 香港
+        taipei: [25.0320, 121.5654],  // 台北
+        sydney: [-33.8688, 151.2093], // 悉尼
+        auckland: [-36.8485, 174.7633], // 奥克兰
+        kualaLumpur: [3.1390, 101.6869], // 吉隆坡
+        singapore: [1.3521, 103.8198]  // 新加坡
+    };
+
+    const keyToText = {
+        shanghai: '上海',
+        tokyo: '东京',
+        seoul: '首尔',
+        hongkong: '香港',
+        taipei: '台北',
+        sydney: '悉尼',
+        auckland: '奥克兰',
+        kualaLumpur: '吉隆坡',
+        singapore: '新加坡',
+    };
+
+    const map = L.map('map').setView([31.2304, 121.4737], 4); // 默认设置为上海的坐标
+
+    // 使用 OpenStreetMap 提供的瓦片图
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+
+    let previousMarkers = [];  // 用于存储之前的标记
+    let previousPath = [];  // 用于存储之前的路径
+    let previousAirplane = null;  // 用于存储之前的飞机标记
+    let flightInterval = null;  // 用于存储飞行动画的 interval ID
+
+    function updateMap() {
+        // 停止并清除上一个动画
+        if (flightInterval) {
+            clearInterval(flightInterval);
+            flightInterval = null;
+        }
+
+        map.eachLayer(function (layer) {
+            if (layer._path != null) {
+                layer.remove();
+            }
+        });
+
+        // 清除之前的标记和路径
+        if (previousMarkers.length > 0) {
+            previousMarkers.forEach(marker => map.removeLayer(marker));
+            previousMarkers = [];
+        }
+        if (previousPath.length > 0) {
+            previousPath.forEach(path => map.removeLayer(path));
+            previousPath = [];
+        }
+        if (previousAirplane) {
+            map.removeLayer(previousAirplane);
+            previousAirplane = null;
+        }
+
+        const startLocation = document.getElementById('start-location').value;
+        const endLocation = document.getElementById('end-location').value;
+
+        const startCoords = locations[startLocation];
+        const endCoords = locations[endLocation];
+
+        // 创建标记并添加到地图
+        const markerA = L.marker(startCoords).addTo(map).bindPopup(keyToText[startLocation]).openPopup();
+        const markerB = L.marker(endCoords).addTo(map).bindPopup(keyToText[endLocation]).openPopup();
+
+        // 保存标记到数组中
+        previousMarkers.push(markerA, markerB);
+
+        // 创建小飞机图标
+        const airplaneIcon = L.icon({
+            iconUrl: '/img/航班.png',
+            iconSize: [42, 42],  // 小飞机图标的大小
+            iconAnchor: [21, 21]  // 将图标的锚点设置为图标的中心
+        });
+
+        // 创建飞机标记并添加到地图
+        previousAirplane = L.marker(startCoords, {icon: airplaneIcon}).addTo(map);
+
+        // 初始化虚线路径（保持虚线样式）
+        const path = L.polyline([startCoords, endCoords], {
+            color: 'blue',
+            weight: 2,
+            opacity: 0.7,
+            dashArray: '10, 10' // 初始虚线
+        }).addTo(map);
+
+        // 保存路径到数组中
+        previousPath.push(path);
+
+        // 飞行路径分段（每次更新一段路径）
+        let pathSegments = [L.polyline([startCoords], {
+            color: 'blue',
+            weight: 2,
+            opacity: 0.7,
+            dashArray: '10, 10'
+        }).addTo(map)];
+
+        // 飞机的飞行动画
+        const totalSteps = 100;  // 飞机动画的总步数
+        let currentStep = 0;
+
+        function animateFlight() {
+            flightInterval = setInterval(() => {
+                const progress = currentStep / totalSteps;
+                const lat = startCoords[0] + (endCoords[0] - startCoords[0]) * progress;
+                const lng = startCoords[1] + (endCoords[1] - startCoords[1]) * progress;
+
+                // 更新飞机位置
+                previousAirplane.setLatLng([lat, lng]);
+
+                // 记录飞机飞过的路径段
+                pathSegments.push(L.polyline([startCoords, [lat, lng]], {
+                    color: 'blue',
+                    weight: 2,
+                    opacity: 0.7,
+                    dashArray: ''  // 已飞过的部分为实线
+                }).addTo(map));
+
+                // 更新路径：飞机经过的部分变为实线
+                for (let i = 0; i < pathSegments.length; i++) {
+                    if (i < currentStep) {
+                        pathSegments[i].setStyle({dashArray: ''});  // 变为实线
+                    }
+                }
+
+                // 如果飞机飞到目的地，停止动画
+                if (currentStep >= totalSteps) {
+                    clearInterval(flightInterval);
+                }
+
+                currentStep++;
+            }, 70);  // 每50ms 更新一次路径
+        }
+
+        // 启动飞机路径动画
+        animateFlight();
+    }
+</script>
+
+</body>
+</html>
