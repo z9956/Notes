@@ -6,6 +6,7 @@ sidebar_position: 1
 
 ```shell
 ufw enable
+ufw reload
 
 ufw allow [port]/tcp #想要放行的端口
 ufw status numbered # 查询放行的端口
