@@ -85,6 +85,7 @@ xray api statsquery --server=127.0.0.1:10080 #查看所有流量
 #配置文件位置
 cat /etc/haproxy/haproxy.cfg
 
+sudo systemctl reload haproxy
 sudo systemctl restart haproxy
 ```
 
@@ -96,6 +97,24 @@ cat /etc/nginx/nginx.conf #配置文件位置
 nginx -s reload #不中断服务，重新加载配置文件
 
 sudo systemctl restart nginx
+```
+
+Docker
+
+```shell
+# 安装 Docker
+curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun
+systemctl enable --now docker
+
+# 安装 docker-compose
+curl -L https://github.com/docker/compose/releases/download/v2.32.1/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
+
+#赋予执行权限
+chmod +x /usr/local/bin/docker-compose
+
+# 验证安装
+docker -v
+docker-compose -v
 ```
 
 ## Prometheus
