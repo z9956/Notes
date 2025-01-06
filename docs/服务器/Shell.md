@@ -155,9 +155,6 @@ scoop config proxy 127.0.0.1:10809
 #移除代理
 scoop config rm proxy
 
-#更换源，bucket源带上https://ghproxy.com/
-scoop config SCOOP_REPO 'https://ghproxy.com/https://github.com/ScoopInstaller/Scoop'
-
 #bucket源移除并重新添加
 scoop bucket rm main
 scoop bucket add main 'https://ghproxy.com/https://github.com/ScoopInstaller/Main'
