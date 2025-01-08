@@ -24,11 +24,13 @@ sidebar_position: 0
 - [x] 兄弟
 - [x] 我与地坛
 - [x] [被讨厌的勇气](https://book.douban.com/subject/26369699/)
+- [x] 长安的荔枝
+- [x] 蛤蟆先生去看心理医生
+- [ ] ~~亲密关系~~
+- [ ] ~~非暴力沟通~~
 - [ ] 苏菲的世界
 - [ ] 西方哲学史：从古希腊到当下
 - [ ] 围城
-- [ ] 亲密关系
-- [ ] 非暴力沟通
 - [ ] 人性的弱点
 - [ ] 社会性动物
 - [ ] 社会心理学
@@ -133,6 +135,7 @@ sidebar_position: 0
 - [x] 饥荒
 - [x] 哈迪斯
 - [x] Apex
+- [x] 黑神话：悟空
 - [ ] [塞尔达传说 旷野之息](https://zh.wikipedia.org/wiki/%E5%A1%9E%E5%B0%94%E8%BE%BE%E4%BC%A0%E8%AF%B4_%E6%97%B7%E9%87%8E%E4%B9%8B%E6%81%AF)
 - [ ] 塞尔达传说 王国之泪
 - [ ] [星之卡比 探索发现](https://zh.wikipedia.org/zh-cn/%E6%98%9F%E4%B9%8B%E5%8D%A1%E6%AF%94_%E6%8E%A2%E7%B4%A2%E7%99%BC%E7%8F%BE)
@@ -154,6 +157,8 @@ sidebar_position: 0
 - 富士 X-S10
   - 富士 XF35mm F2 镜头
   - 适马 18-50mm F2.8 DC DN
+  - 腾龙 17-70mm F2.8
+- 联想拯救者 Y700三代
 - 电脑
   - 撼讯 RX6750XT GDDR6 12GB
   - AMD R5 5600散片 + B550M-PLUS II WIFI
@@ -162,5 +167,6 @@ sidebar_position: 0
   - 三星 1TB 980 PRO
   - 海力士 P41 2TB
   - 墨将彩虹 2 pro 手柄
+  - ps5手柄
 
 **[⬆ back to top](#技术书单)**
