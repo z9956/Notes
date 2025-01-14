@@ -2,7 +2,6 @@ import SharedGlobalState from '../../src/components/sharedGlobalState/index.jsx'
 
 ## examples
 
-查看控制台输出
 <SharedGlobalState/>
 
 ## [source code](https://github.com/z9956/Notes/blob/main/src/components/sharedGlobalState)
