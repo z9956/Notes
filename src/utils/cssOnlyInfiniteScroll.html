@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Table Layout</title>
+    <style>
+      .card {
+        width: 100%;
+        color: #fff;
+        border-radius: 24px;
+        box-shadow: rgba(0, 0, 0, 10%) 5px 5px 20px 0;
+        padding: 20px;
+        font-size: xx-large;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 200px;
+      }
+
+      .card:nth-child(1) {
+        background: #7958ff;
+      }
+
+      .card:nth-child(2) {
+        background: #5d34f2;
+      }
+
+      .card:nth-child(3) {
+        background: #4300da;
+      }
+
+      .carousel {
+        margin: 0 auto;
+        padding: 20px 0;
+        max-width: 700px;
+        overflow: hidden;
+        display: flex;
+      }
+
+      .carousel {
+        margin: 0 auto;
+        padding: 20px 0;
+        max-width: 700px;
+        overflow: hidden;
+        display: flex;
+      }
+
+      .carousel.animated:hover .group {
+        animation-play-state: paused;
+      }
+
+      .carousel:not(.basic) > * {
+        flex: 0 0 100%;
+      }
+
+      .group {
+        display: flex;
+        gap: 20px;
+        padding-right: 20px;
+        will-change: transform;
+      }
+
+      .group.animated {
+        animation: scrolling 10s linear infinite;
+      }
+
+      @keyframes scrolling {
+        0% {
+          transform: translateX(0);
+        }
+
+        100% {
+          transform: translateX(-100%);
+        }
+      }
+    </style>
+  </head>
+  <body>
+
+<div class="carousel animated">
+  <div class="group animated">
+    <div class="card">A</div>
+    <div class="card">B</div>
+    <div class="card">C</div>
+  </div>
+  <div aria-hidden="true" class="group animated">
+    <div class="card">A</div>
+    <div class="card">B</div>
+    <div class="card">C</div>
+  </div>
+</div>
+  </body>
+</html>
