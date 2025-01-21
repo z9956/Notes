@@ -86,6 +86,9 @@ xray api statsquery --server=127.0.0.1:10080 #查看所有流量
 #配置文件位置
 cat /etc/haproxy/haproxy.cfg
 
+#证书合并顺序
+key + crt (RSA PRIVATE KEY + CERTIFICATE)
+
 sudo systemctl reload haproxy
 sudo systemctl restart haproxy
 ```
