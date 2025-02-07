@@ -1,7 +1,5 @@
 import RadialGradientComponent from '../../src/components/radial-gradient';
 
-## css 设置滚动条默认至最底部
-
 ## examples
 
 <RadialGradientComponent/>
