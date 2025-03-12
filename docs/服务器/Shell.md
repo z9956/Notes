@@ -89,6 +89,12 @@ cat /etc/haproxy/haproxy.cfg
 #证书合并顺序
 key + crt (RSA PRIVATE KEY + CERTIFICATE)
 
+#检查配置是否正确
+haproxy -c -f /etc/haproxy/haproxy.cfg
+
+#启动
+haproxy -f /etc/haproxy/haproxy.cfg
+
 sudo systemctl reload haproxy
 sudo systemctl restart haproxy
 ```
