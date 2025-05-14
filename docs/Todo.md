@@ -154,10 +154,10 @@ sidebar_position: 0
 - 微软（Microsoft）Xbox 手柄 无线
 - Nintendo Switch OLED 日版
   - Nintendo Switch Pro 手柄
-- 富士 X-S10
-  - 富士 XF35mm F2 镜头
-  - 适马 18-50mm F2.8 DC DN
-  - 腾龙 17-70mm F2.8
+- 尼康 Z5II
+  - 唯卓仕  50mm F2 
+  - 尼康    24-70mm F4
+  - 腾龙    70-300mm F4.5-6.3
 - 联想拯救者 Y700三代
 - 电脑
   - 撼讯 RX6750XT GDDR6 12GB
