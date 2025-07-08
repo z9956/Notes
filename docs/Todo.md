@@ -155,9 +155,11 @@ sidebar_position: 0
 - Nintendo Switch OLED 日版
   - Nintendo Switch Pro 手柄
 - 尼康 Z5II
-  - 唯卓仕  50mm F2 
-  - 尼康    24-70mm F4
-  - 腾龙    70-300mm F4.5-6.3
+  - 尼克尔 24-70mm F4S
+  - 尼克尔 24-200mm F/4-6.3 
+  - 腾龙   70-300mm F4.5-6.3
+  - 唯卓仕 16mm F1.8
+  - 唯卓仕 50mm F2
 - 联想拯救者 Y700三代
 - 电脑
   - 撼讯 RX6750XT GDDR6 12GB
